@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Mail, MapPin, ArrowUpRight } from 'lucide-react';
+import { Mail, MapPin, ArrowUpRight, Phone } from 'lucide-react';
 
 const GithubIcon: React.FC<React.SVGProps<SVGSVGElement>> = (props) => (
   <svg
@@ -134,6 +134,12 @@ export const Footer: React.FC = () => {
                 <Mail className="h-4 w-4 text-white/40 shrink-0" />
                 <a href="mailto:mdabdbasit@gmail.com" className="hover:text-white transition-colors duration-300">
                   mdabdbasit@gmail.com
+                </a>
+              </div>
+              <div className="flex items-center gap-2">
+                <Phone className="h-4 w-4 text-white/40 shrink-0" />
+                <a href="tel:+919908717850" className="hover:text-white transition-colors duration-300">
+                  +91 99087 17850
                 </a>
               </div>
               <a 

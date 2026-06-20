@@ -1,7 +1,6 @@
-import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import React from 'react';
 import { GlassCard } from '../components/ui/GlassCard';
-import { Mail, MapPin, Send, CheckCircle2, X } from 'lucide-react';
+import { Mail, MapPin, Phone } from 'lucide-react';
 
 const GithubIcon: React.FC<React.SVGProps<SVGSVGElement>> = (props) => (
   <svg
@@ -35,23 +34,18 @@ const LinkedinIcon: React.FC<React.SVGProps<SVGSVGElement>> = (props) => (
 );
 
 export const Contact: React.FC = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    subject: '',
-    message: '',
-  });
-
-  const [errors, setErrors] = useState<Record<string, string>>({});
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [showSuccessModal, setShowSuccessModal] = useState(false);
-
   const contactDetails = [
     {
       icon: <Mail className="h-5 w-5 text-[#f5a972]" />,
       label: 'Email Address',
       value: 'mdabdbasit@gmail.com',
       href: 'mailto:mdabdbasit@gmail.com',
+    },
+    {
+      icon: <Phone className="h-5 w-5 text-[#f5a972]" />,
+      label: 'Phone Number',
+      value: '+91 99087 17850',
+      href: 'tel:+919908717850',
     },
     {
       icon: <MapPin className="h-5 w-5 text-[#f5a972]" />,
@@ -72,235 +66,44 @@ export const Contact: React.FC = () => {
     },
   ];
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target;
-    setFormData({ ...formData, [name]: value });
-    if (errors[name]) {
-      setErrors({ ...errors, [name]: '' });
-    }
-  };
-
-  const validateForm = () => {
-    const newErrors: Record<string, string> = {};
-    if (!formData.name.trim()) newErrors.name = 'Name is required';
-    
-    if (!formData.email.trim()) {
-      newErrors.email = 'Email is required';
-    } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
-      newErrors.email = 'Please provide a valid email';
-    }
-    
-    if (!formData.subject.trim()) newErrors.subject = 'Subject is required';
-    if (!formData.message.trim()) newErrors.message = 'Message is required';
-    
-    setErrors(newErrors);
-    return Object.keys(newErrors).length === 0;
-  };
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!validateForm()) return;
-
-    setIsSubmitting(true);
-    
-    // Simulate API request send
-    setTimeout(() => {
-      setIsSubmitting(false);
-      setShowSuccessModal(true);
-      setFormData({ name: '', email: '', subject: '', message: '' });
-    }, 1500);
-  };
-
   return (
-    <div className="mx-auto max-w-5xl px-6 py-12 font-sans text-white bg-black relative">
+    <div className="mx-auto max-w-5xl px-6 py-12 font-sans text-white bg-black">
       
       {/* Header */}
-      <div className="text-left mb-16">
+      <div className="text-center mb-16 max-w-lg mx-auto">
         <span className="text-xs font-bold tracking-widest text-[#f5a972] uppercase font-mono">04. INQUIRY</span>
         <h1 className="text-3xl sm:text-6xl font-extrabold tracking-tighter mt-4 leading-none">Contact</h1>
-        <p className="text-sm text-[#86868b] mt-4 max-w-lg leading-relaxed font-medium">
+        <p className="text-sm text-[#86868b] mt-4 leading-relaxed font-medium">
           Open to gameplay engineering positions, full-stack web roles, or technical art collaborations.
         </p>
       </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start text-left">
-        
-        {/* Left Column: Details */}
-        <div className="lg:col-span-5 flex flex-col gap-6">
-          {contactDetails.map((detail, idx) => (
-            <GlassCard key={detail.label} delay={idx * 0.05} className="flex gap-4 items-center p-6 border border-white/10 bg-[#050505] rounded-2xl">
-              <div className="h-10 w-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center shrink-0">
-                {detail.icon}
-              </div>
-              <div className="flex flex-col">
-                <span className="text-[10px] font-mono text-[#86868b] tracking-wider uppercase">{detail.label}</span>
-                {detail.href ? (
-                  <a
-                    href={detail.href}
-                    target={detail.href.startsWith('http') ? '_blank' : undefined}
-                    rel={detail.href.startsWith('http') ? 'noopener noreferrer' : undefined}
-                    className="text-sm sm:text-base font-bold text-white hover:text-[#0071e3] transition-colors duration-300 mt-0.5 break-all"
-                  >
-                    {detail.value}
-                  </a>
-                ) : (
-                  <span className="text-sm sm:text-base font-bold text-white mt-0.5 break-all">
-                    {detail.value}
-                  </span>
-                )}
-              </div>
-            </GlassCard>
-          ))}
-        </div>
-
-        {/* Right Column: Form */}
-        <div className="lg:col-span-7">
-          <GlassCard className="p-8 border border-white/10 bg-[#050505] rounded-3xl">
-            <h2 className="text-xl font-bold tracking-tight text-white mb-6">Send a Message</h2>
-            
-            <form onSubmit={handleSubmit} className="flex flex-col gap-5">
-              
-              {/* Row: Name & Email */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <div className="flex flex-col gap-1.5">
-                  <label htmlFor="name" className="text-xs font-bold text-[#86868b] uppercase tracking-wider">Your Name</label>
-                  <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    value={formData.name}
-                    onChange={handleInputChange}
-                    className={`rounded-xl border bg-black px-4 py-3 text-sm text-white focus:outline-none focus:border-[#0071e3] transition-colors ${
-                      errors.name ? 'border-red-500/50' : 'border-white/10'
-                    }`}
-                    placeholder="John Doe"
-                  />
-                  {errors.name && <span className="text-[10px] font-mono text-red-500 mt-1">{errors.name}</span>}
-                </div>
-
-                <div className="flex flex-col gap-1.5">
-                  <label htmlFor="email" className="text-xs font-bold text-[#86868b] uppercase tracking-wider">Email Address</label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    value={formData.email}
-                    onChange={handleInputChange}
-                    className={`rounded-xl border bg-black px-4 py-3 text-sm text-white focus:outline-none focus:border-[#0071e3] transition-colors ${
-                      errors.email ? 'border-red-500/50' : 'border-white/10'
-                    }`}
-                    placeholder="johndoe@email.com"
-                  />
-                  {errors.email && <span className="text-[10px] font-mono text-red-500 mt-1">{errors.email}</span>}
-                </div>
-              </div>
-
-              {/* Subject */}
-              <div className="flex flex-col gap-1.5">
-                <label htmlFor="subject" className="text-xs font-bold text-[#86868b] uppercase tracking-wider">Subject</label>
-                <input
-                  type="text"
-                  id="subject"
-                  name="subject"
-                  value={formData.subject}
-                  onChange={handleInputChange}
-                  className={`rounded-xl border bg-black px-4 py-3 text-sm text-white focus:outline-none focus:border-[#0071e3] transition-colors ${
-                    errors.subject ? 'border-red-500/50' : 'border-white/10'
-                  }`}
-                  placeholder="Inquiry / Opportunities"
-                />
-                {errors.subject && <span className="text-[10px] font-mono text-red-500 mt-1">{errors.subject}</span>}
-              </div>
-
-              {/* Message */}
-              <div className="flex flex-col gap-1.5">
-                <label htmlFor="message" className="text-xs font-bold text-[#86868b] uppercase tracking-wider">Message</label>
-                <textarea
-                  id="message"
-                  name="message"
-                  rows={5}
-                  value={formData.message}
-                  onChange={handleInputChange}
-                  className={`rounded-xl border bg-black px-4 py-3 text-sm text-white focus:outline-none focus:border-[#0071e3] transition-colors resize-none ${
-                    errors.message ? 'border-red-500/50' : 'border-white/10'
-                  }`}
-                  placeholder="Describe your inquiry details..."
-                />
-                {errors.message && <span className="text-[10px] font-mono text-red-500 mt-1">{errors.message}</span>}
-              </div>
-
-              {/* Submit */}
-              <button
-                type="submit"
-                disabled={isSubmitting}
-                className="mt-2 btn-apple-blue font-bold shadow-xl"
-              >
-                {isSubmitting ? (
-                  <>
-                    <span className="h-4 w-4 animate-spin rounded-full border-2 border-current border-t-transparent" />
-                    <span>Processing...</span>
-                  </>
-                ) : (
-                  <>
-                    <span>Send Message</span>
-                    <Send className="h-4 w-4 ml-1.5" />
-                  </>
-                )}
-              </button>
-
-            </form>
-          </GlassCard>
-        </div>
-      </div>
-
-      {/* Success Modal */}
-      <AnimatePresence>
-        {showSuccessModal && (
-          <div className="fixed inset-0 z-50 flex items-center justify-center p-6">
-            {/* Backdrop */}
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              onClick={() => setShowSuccessModal(false)}
-              className="absolute inset-0 bg-black/85 backdrop-blur-md"
-            />
-
-            {/* Modal Body */}
-            <motion.div
-              initial={{ opacity: 0, scale: 0.95 }}
-              animate={{ opacity: 1, scale: 1 }}
-              exit={{ opacity: 0, scale: 0.95 }}
-              transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
-              className="glassmorphism relative w-full max-w-sm rounded-3xl p-8 border border-white/10 bg-black shadow-2xl z-10 text-center"
-            >
-              {/* Close Button */}
-              <button
-                onClick={() => setShowSuccessModal(false)}
-                className="absolute top-4 right-4 flex h-8 w-8 items-center justify-center rounded-full border border-white/15 bg-white/5 text-white/60 hover:text-white transition-all duration-300"
-              >
-                <X className="h-4 w-4" />
-              </button>
-
-              <div className="flex flex-col items-center gap-4">
-                <div className="h-12 w-12 rounded-full bg-green-500/10 border border-green-500/30 flex items-center justify-center">
-                  <CheckCircle2 className="h-6 w-6 text-green-500" />
-                </div>
-                <h3 className="text-xl font-bold tracking-tight text-white mt-2">Message Sent</h3>
-                <p className="text-xs text-[#86868b] leading-relaxed max-w-xs">
-                  Your message has been processed successfully. MD Abdul Basit will respond to your email.
-                </p>
-                <button
-                  onClick={() => setShowSuccessModal(false)}
-                  className="mt-2 w-full btn-apple-blue"
+      <div className="max-w-xl mx-auto flex flex-col gap-5 text-left">
+        {contactDetails.map((detail, idx) => (
+          <GlassCard key={detail.label} delay={idx * 0.05} className="flex gap-4 items-center p-6 border border-white/10 bg-[#050505] rounded-2xl">
+            <div className="h-10 w-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center shrink-0">
+              {detail.icon}
+            </div>
+            <div className="flex flex-col">
+              <span className="text-[10px] font-mono text-[#86868b] tracking-wider uppercase">{detail.label}</span>
+              {detail.href ? (
+                <a
+                  href={detail.href}
+                  target={detail.href.startsWith('http') ? '_blank' : undefined}
+                  rel={detail.href.startsWith('http') ? 'noopener noreferrer' : undefined}
+                  className="text-sm sm:text-base font-bold text-white hover:text-[#0071e3] transition-colors duration-300 mt-0.5 break-all"
                 >
-                  Done
-                </button>
-              </div>
-            </motion.div>
-          </div>
-        )}
-      </AnimatePresence>
+                  {detail.value}
+                </a>
+              ) : (
+                <span className="text-sm sm:text-base font-bold text-white mt-0.5 break-all">
+                  {detail.value}
+                </span>
+              )}
+            </div>
+          </GlassCard>
+        ))}
+      </div>
 
     </div>
   );
