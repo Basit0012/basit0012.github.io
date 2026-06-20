@@ -33,7 +33,7 @@ export const IsometricEnvironment: React.FC = () => {
           Isometric Environment
         </h1>
         <h2 className="mt-4 text-lg sm:text-xl font-medium text-[#86868b]">
-          Cyber-Noir Environment &amp; Rotational Camera Path &bull; Built in Blender
+          3D Environment &amp; Light Pipeline Artist &bull; Built in Blender
         </h2>
       </div>
 
@@ -60,27 +60,27 @@ export const IsometricEnvironment: React.FC = () => {
           </div>
 
           <div>
-            <h3 className="text-xl sm:text-2xl font-bold tracking-tight text-white mb-6">Artistic Methods</h3>
+            <h3 className="text-xl sm:text-2xl font-bold tracking-tight text-white mb-6">Pipeline &amp; Modeling Methods</h3>
             <div className="flex flex-col border-t border-white/10">
               
               <div className="py-6 border-b border-white/10 grid grid-cols-1 sm:grid-cols-3 gap-2">
-                <span className="text-xs font-bold text-[#86868b] font-mono uppercase">LIGHT RIGGING</span>
+                <span className="text-xs font-bold text-[#86868b] font-mono uppercase">LIGHT &amp; EMISSIVE NODES</span>
                 <span className="sm:col-span-2 text-xs sm:text-sm text-white/80 leading-relaxed font-medium">
-                  Utilized high-contrast area lamps simulating neon signs. Combined area volumes with volumetric scatter particles to render tangible light beams.
+                  Drafted, modeled, and animated an atmospheric cyber-noir isometric environment utilizing complex lighting nodes and emissive material property tables.
                 </span>
               </div>
 
               <div className="py-6 border-b border-white/10 grid grid-cols-1 sm:grid-cols-3 gap-2">
-                <span className="text-xs font-bold text-[#86868b] font-mono uppercase">PROCEDURAL SHADERS</span>
+                <span className="text-xs font-bold text-[#86868b] font-mono uppercase">KEYFRAME ANIMATIONS</span>
                 <span className="sm:col-span-2 text-xs sm:text-sm text-white/80 leading-relaxed font-medium">
-                  Programmed shader node chains in Blender, mixing Musgrave and Voronoi math gradients for modular surface rust and flickers.
+                  Implemented rigid low-poly meshes, explicit keyframe animations, and camera sequences satisfying an "O Grade" technical execution standard.
                 </span>
               </div>
 
               <div className="py-6 border-b border-white/10 grid grid-cols-1 sm:grid-cols-3 gap-2">
-                <span className="text-xs font-bold text-[#86868b] font-mono uppercase">LIGHT BAKING</span>
+                <span className="text-xs font-bold text-[#86868b] font-mono uppercase">ASSET OPTIMIZATION</span>
                 <span className="sm:col-span-2 text-xs sm:text-sm text-white/80 leading-relaxed font-medium">
-                  Baked contact ambient occlusion maps directly into single texture layouts, reducing GPU draw calculations inside runtime engines.
+                  Designed clean, layout-optimized 3D assets constructed specifically for unhindered viewport performance when deployed within external engine levels.
                 </span>
               </div>
 

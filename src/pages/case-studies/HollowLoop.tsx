@@ -122,23 +122,30 @@ namespace HollowLoop.Core.Systems
             <div className="flex flex-col border-t border-white/10">
               
               <div className="py-6 border-b border-white/10 grid grid-cols-1 sm:grid-cols-3 gap-2">
-                <span className="text-xs font-bold text-[#86868b] font-mono uppercase">STATE SAVING</span>
+                <span className="text-xs font-bold text-[#86868b] font-mono uppercase">CORE GAMEPLAY</span>
                 <span className="sm:col-span-2 text-xs sm:text-sm text-white/80 leading-relaxed font-medium">
-                  Constructed an interface-driven save manager executing asynchronous local file writes. Uses generic dictionaries mapped to unique entity strings.
+                  Engineered a fully playable 3D psychological horror game utilizing event-driven gameplay scripts and dynamic environment state trackers.
                 </span>
               </div>
 
               <div className="py-6 border-b border-white/10 grid grid-cols-1 sm:grid-cols-3 gap-2">
-                <span className="text-xs font-bold text-[#86868b] font-mono uppercase">DECOUPLED LOGIC</span>
+                <span className="text-xs font-bold text-[#86868b] font-mono uppercase">MODULAR SUB-SYSTEMS</span>
                 <span className="sm:col-span-2 text-xs sm:text-sm text-white/80 leading-relaxed font-medium">
-                  Utilized C# events and Actions to broker communications between triggers, environmental updates, and visual overlays.
+                  Architected highly reusable, modular object sub-systems managing structural player mechanics, absolute checkpoint saving, item inventories, and smooth scene progression.
                 </span>
               </div>
 
               <div className="py-6 border-b border-white/10 grid grid-cols-1 sm:grid-cols-3 gap-2">
-                <span className="text-xs font-bold text-[#86868b] font-mono uppercase">INVENTORY PIPELINES</span>
+                <span className="text-xs font-bold text-[#86868b] font-mono uppercase">OOP ARCHITECTURE</span>
                 <span className="sm:col-span-2 text-xs sm:text-sm text-white/80 leading-relaxed font-medium">
-                  Designed modular ScriptableObjects containing slot weights and item characteristics, dynamically instantiated on pickup.
+                  Applied comprehensive Object-Oriented Programming (OOP) architectures and design patterns to secure maximum codebase maintainability.
+                </span>
+              </div>
+
+              <div className="py-6 border-b border-white/10 grid grid-cols-1 sm:grid-cols-3 gap-2">
+                <span className="text-xs font-bold text-[#86868b] font-mono uppercase">OPTIMIZATION WORK</span>
+                <span className="sm:col-span-2 text-xs sm:text-sm text-white/80 leading-relaxed font-medium">
+                  Optimized spatial mesh rendering queues, runtime engine asset loading, and computational script loops to establish smooth performance markers.
                 </span>
               </div>
 

@@ -1,39 +1,24 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { GlassCard } from '../components/ui/GlassCard';
-import { Gamepad2, Paintbrush, Code2, Database, Wrench, Layers } from 'lucide-react';
+import { Gamepad2, Paintbrush, Code2 } from 'lucide-react';
 
 export const About: React.FC = () => {
   const skillCategories = [
     {
-      title: 'Game Development',
+      title: 'Game Development & Core Engineering',
       icon: <Gamepad2 className="h-5 w-5 text-[#f5a972]" />,
-      skills: ['Unity Engine', 'C# scripting', 'C++ systems', 'OOP Architecture', 'Gameplay loops', 'Performance profiling'],
+      skills: ['C++', 'C#', 'Unity Engine', 'Object-Oriented Programming (OOP)', '3D Vector Math', 'Game Loop Optimization', 'Memory Management', 'Data Structures & Algorithms (DSA)'],
     },
     {
-      title: 'Technical Art',
+      title: 'Technical Art & Design UI/UX',
       icon: <Paintbrush className="h-5 w-5 text-[#f5a972]" />,
-      skills: ['Blender 3D modeling', 'Environment design', 'Emissive lighting', 'Procedural shader nodes', 'Light baking'],
+      skills: ['Blender (Advanced - O Grade Performance)', 'Figma (Interactive Gameplay Interface Wireframing & State Flows)'],
     },
     {
-      title: 'Full Stack Web',
+      title: 'Full-Stack Systems & Cloud Infrastructure',
       icon: <Code2 className="h-5 w-5 text-[#f5a972]" />,
-      skills: ['React 19', 'Node.js runtime', 'Express routes', 'JavaScript ES6', 'TypeScript typings', 'RESTful API contracts'],
-    },
-    {
-      title: 'Databases',
-      icon: <Database className="h-5 w-5 text-[#f5a972]" />,
-      skills: ['MongoDB records', 'PostgreSQL relations'],
-    },
-    {
-      title: 'UI/UX Design',
-      icon: <Layers className="h-5 w-5 text-[#f5a972]" />,
-      skills: ['Figma canvas', 'Interactive wireframing', 'User flow design'],
-    },
-    {
-      title: 'Tools & Protocols',
-      icon: <Wrench className="h-5 w-5 text-[#f5a972]" />,
-      skills: ['Git version control', 'GitHub pull requests', 'VS Code workspace', 'WebSockets live feeds'],
+      skills: ['Node.js', 'React.js', 'Express.js', 'WebSockets', 'HTML5', 'CSS3', 'Tailwind CSS', 'RESTful APIs', 'PostgreSQL', 'MongoDB', 'Git/GitHub'],
     },
   ];
 

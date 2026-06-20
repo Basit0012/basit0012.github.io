@@ -71,7 +71,7 @@ export class SecureIPCChannel extends EventEmitter {
           React Web OS
         </h1>
         <h2 className="mt-4 text-lg sm:text-xl font-medium text-[#86868b]">
-          Real-Time Browser Desktop Environment &bull; Core Communication Architecture
+          Full-Stack Engineering Intern &bull; Browser Operating System &amp; Secure IPC
         </h2>
       </div>
 
@@ -93,7 +93,7 @@ export class SecureIPCChannel extends EventEmitter {
           <div>
             <h3 className="text-xl sm:text-2xl font-bold tracking-tight text-white mb-4">Project Overview</h3>
             <p className="text-sm sm:text-base text-[#86868b] leading-relaxed font-medium">
-              React Web OS is a fully interactive simulation of a desktop operating system running directly inside the browser. It features floating window management, app lifecycles (Terminal, File Manager, Browser, Text Editor), and a mock background daemon system.
+              React Web OS is a browser-based operating system desktop simulation. Engineered secure inter-process communication (IPC) protocols, real-time message streaming over WebSockets, and modular app window frames.
             </p>
           </div>
 
@@ -102,23 +102,23 @@ export class SecureIPCChannel extends EventEmitter {
             <div className="flex flex-col border-t border-white/10">
               
               <div className="py-6 border-b border-white/10 grid grid-cols-1 sm:grid-cols-3 gap-2">
-                <span className="text-xs font-bold text-[#86868b] font-mono uppercase">SECURITY CORES</span>
+                <span className="text-xs font-bold text-[#86868b] font-mono uppercase">INTERACTIVE DESKTOP</span>
                 <span className="sm:col-span-2 text-xs sm:text-sm text-white/80 leading-relaxed font-medium">
-                  Designed origin filtering and payload signature hashes, stopping untrusted code frames from invoking system-level triggers.
+                  Engineered an interactive browser-simulated environment using React.js, Tailwind CSS, and Vite to execute fluid UI scaling and granular client-side state adjustments.
                 </span>
               </div>
 
               <div className="py-6 border-b border-white/10 grid grid-cols-1 sm:grid-cols-3 gap-2">
-                <span className="text-xs font-bold text-[#86868b] font-mono uppercase">SOCKET POOLS</span>
+                <span className="text-xs font-bold text-[#86868b] font-mono uppercase">COMMUNICATIONS LINK</span>
                 <span className="sm:col-span-2 text-xs sm:text-sm text-white/80 leading-relaxed font-medium">
-                  Managed multi-window communication updates via single unified WebSocket pipelines, minimizing process thread counts.
+                  Created a bidirectional communications infrastructure featuring Node.js and WebSockets handling high-frequency packet transmission and server synchronization.
                 </span>
               </div>
 
               <div className="py-6 border-b border-white/10 grid grid-cols-1 sm:grid-cols-3 gap-2">
-                <span className="text-xs font-bold text-[#86868b] font-mono uppercase">STATE BATCHING</span>
+                <span className="text-xs font-bold text-[#86868b] font-mono uppercase">STRESS TESTING</span>
                 <span className="sm:col-span-2 text-xs sm:text-sm text-white/80 leading-relaxed font-medium">
-                  Implemented render batch queues to prevent UI freezes on the React app shell when coordinates are dragged rapidly.
+                  Debugged micro-latency events, concurrency blockers, and real-time state mutations during production cycle stress testing.
                 </span>
               </div>
 

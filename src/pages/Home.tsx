@@ -298,10 +298,26 @@ export const Home: React.FC = () => {
               <div className="md:col-span-9 flex flex-col gap-2">
                 <h3 className="text-lg font-bold text-white leading-tight">Software Engineering Intern</h3>
                 <span className="text-sm text-[#f5a972] font-semibold">Cipher Schools</span>
-                <span className="text-xs text-[#86868b] font-mono">JUNE 2025 – AUGUST 2025 &bull; SECUNDERABAD, INDIA</span>
+                <span className="text-xs text-[#86868b] font-mono">JUNE 2025 – AUG 2025 &bull; SECUNDERABAD, INDIA</span>
                 <p className="text-xs text-[#86868b] leading-relaxed mt-2 max-w-xl">
-                  Collaborated on core data structure engineering, participated in git workflows, and conducted peer code reviews adhering to enterprise software engineering standards.
+                  Implemented scalable production-grade algorithm trees and audited team code review processes using standard Git/GitHub collaborative workflows.
                 </p>
+              </div>
+            </div>
+
+            {/* Leadership & Volunteer Block */}
+            <div className="grid grid-cols-1 md:grid-cols-12 py-8 border-b border-white/10 items-start gap-4">
+              <div className="md:col-span-3 text-xs font-bold tracking-widest text-[#86868b] uppercase font-mono">
+                LEADERSHIP &amp; VOLUNTEER
+              </div>
+              <div className="md:col-span-9 flex flex-col gap-2">
+                <h3 className="text-lg font-bold text-white leading-tight">Volunteer Chemistry Instructor (11th &amp; 12th Grade)</h3>
+                <span className="text-sm text-[#f5a972] font-semibold">Local Community Support Center</span>
+                <span className="text-xs text-[#86868b] font-mono">JUNE 2024 – JULY 2024</span>
+                <ul className="text-xs text-[#86868b] leading-relaxed mt-2 max-w-xl list-disc pl-4 flex flex-col gap-1.5">
+                  <li>Developed and delivered targeted Chemistry lessons to senior high school students at a local orphanage, breaking down complex foundational concepts and equations.</li>
+                  <li>Designed custom learning frameworks to spark scientific curiosity, improve retention rates, and build academic confidence in an underprivileged demographic.</li>
+                </ul>
               </div>
             </div>
 
@@ -311,11 +327,11 @@ export const Home: React.FC = () => {
                 EDUCATION
               </div>
               <div className="md:col-span-9 flex flex-col gap-2">
-                <h3 className="text-lg font-bold text-white leading-tight">Bachelor of Technology (B.Tech)</h3>
-                <span className="text-sm text-[#f5a972] font-semibold">Lovely Professional University (LPU)</span>
-                <span className="text-xs text-[#86868b] font-mono">2023 – PRESENT &bull; COMPUTER SCIENCE &amp; ENGINEERING</span>
+                <h3 className="text-lg font-bold text-white leading-tight">Bachelor of Technology in Computer Science and Engineering</h3>
+                <span className="text-sm text-[#f5a972] font-semibold">Lovely Professional University</span>
+                <span className="text-xs text-[#86868b] font-mono">AUG 2023 – PRESENT</span>
                 <p className="text-xs text-[#86868b] leading-relaxed mt-2 max-w-xl">
-                  Deeply focused on Data Structures &amp; Algorithms, Database Management, and Systems Engineering.
+                  Core Coursework: Data Structures &amp; Algorithms, Database Management Systems, Advanced Systems Engineering.
                 </p>
               </div>
             </div>
@@ -327,7 +343,7 @@ export const Home: React.FC = () => {
               </div>
               <div className="md:col-span-9">
                 <div className="flex flex-wrap gap-2">
-                  {['Gameplay Systems', '3D Environment Design', 'Real-time Web APIs', 'Performance Profiling', 'Shader Development'].map((item) => (
+                  {['Game Loops & Rendering', 'Memory Management', 'Vector Math & DSA', '3D Environment Design', 'WebSockets & Live APIs', 'Figma Prototyping'].map((item) => (
                     <span key={item} className="inline-flex items-center gap-1 text-xs text-white bg-[#111] px-3.5 py-1.5 rounded-full border border-white/5">
                       <Check className="h-3 w-3 text-[#f5a972]" />
                       {item}
