@@ -13,6 +13,7 @@ interface ProjectItem {
   tech: string[];
   path: string;
   icon: React.ReactNode;
+  videoUrl?: string;
 }
 
 export const Projects: React.FC = () => {
@@ -39,7 +40,8 @@ export const Projects: React.FC = () => {
       img: '/blender-work.png',
       tech: ['Blender', 'Advanced rendering', 'Light Baking', 'Emissive Shaders', 'Animation', 'Viewport Optimization'],
       path: '/projects/stylized-isometric-environment',
-      icon: <Palette className="h-4 w-4 text-[#f5a972]" />
+      icon: <Palette className="h-4 w-4 text-[#f5a972]" />,
+      videoUrl: 'https://www.youtube.com/watch?v=oe8kgXNqLFI'
     },
     {
       id: 'react-web-os',
@@ -153,10 +155,20 @@ export const Projects: React.FC = () => {
                   ))}
                 </div>
 
-                <div className="mt-4 flex gap-4">
+                <div className="mt-4 flex items-center gap-4">
                   <RouterLink to={project.path} className="btn-apple-blue">
                     Read Case Study
                   </RouterLink>
+                  {project.videoUrl && (
+                    <a
+                      href={project.videoUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1.5 text-sm font-semibold text-[#2997ff] hover:underline"
+                    >
+                      Watch Animation <span className="text-xs">→</span>
+                    </a>
+                  )}
                 </div>
               </div>
             </motion.div>

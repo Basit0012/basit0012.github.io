@@ -25,16 +25,26 @@ export const IsometricEnvironment: React.FC = () => {
       </div>
 
       {/* Hero Header */}
-      <div className="text-left mb-16">
-        <span className="text-xs font-bold tracking-widest text-[#f5a972] uppercase font-mono">
-          TECHNICAL ART SPEC SHEET
-        </span>
-        <h1 className="text-3xl sm:text-6xl font-extrabold tracking-tighter mt-4 leading-none">
-          Isometric Environment
-        </h1>
-        <h2 className="mt-4 text-lg sm:text-xl font-medium text-[#86868b]">
-          3D Environment &amp; Light Pipeline Artist &bull; Built in Blender
-        </h2>
+      <div className="text-left mb-16 flex flex-col sm:flex-row sm:items-end sm:justify-between gap-6">
+        <div>
+          <span className="text-xs font-bold tracking-widest text-[#f5a972] uppercase font-mono">
+            TECHNICAL ART SPEC SHEET
+          </span>
+          <h1 className="text-3xl sm:text-6xl font-extrabold tracking-tighter mt-4 leading-none">
+            Isometric Environment
+          </h1>
+          <h2 className="mt-4 text-lg sm:text-xl font-medium text-[#86868b]">
+            3D Environment &amp; Light Pipeline Artist &bull; Built in Blender
+          </h2>
+        </div>
+        <a
+          href="https://www.youtube.com/watch?v=oe8kgXNqLFI"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="btn-apple-blue shrink-0 text-center"
+        >
+          Watch Animation Video
+        </a>
       </div>
 
       {/* Main Image Block */}

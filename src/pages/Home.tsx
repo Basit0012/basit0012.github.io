@@ -83,15 +83,6 @@ export const Home: React.FC = () => {
       {/* 1. HERO SECTION (iPhone 17 Pro Launch Style) */}
       <section className="relative min-h-[95vh] flex flex-col justify-between pt-12 pb-16">
         <div className="mx-auto max-w-7xl px-6 w-full text-center flex flex-col items-center justify-center flex-1">
-          {/* Top Title Tag */}
-          <motion.span
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-sm font-bold tracking-widest text-[#f5a972] uppercase font-mono"
-          >
-            MD ABDUL BASIT
-          </motion.span>
 
           {/* Large Title Header */}
           <motion.div
@@ -100,11 +91,11 @@ export const Home: React.FC = () => {
             transition={{ duration: 1.0, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
             className="mt-2 flex flex-col items-center"
           >
-            <h1 className="text-3xl sm:text-5xl font-extrabold tracking-tight text-white">
-              iPhone 17
+            <h1 className="text-3xl sm:text-5xl font-extrabold tracking-tight text-white uppercase">
+              MD ABDUL BASIT
             </h1>
             <h2 className="text-hero-title text-gradient-copper tracking-tightest mt-1">
-              PRO
+              PORTFOLIO
             </h2>
             <span className="text-xs sm:text-sm font-bold tracking-widest text-white/50 uppercase mt-4 block">
               GAME DEV &bull; TECHNICAL ARTIST &bull; FULL-STACK ENGINEER
@@ -120,7 +111,7 @@ export const Home: React.FC = () => {
           >
             <div className="relative w-full h-full rounded-2xl overflow-hidden bg-black">
               <img
-                src="/profile.jpg"
+                src="/profile.png"
                 alt="MD Abdul Basit"
                 className="w-full h-full object-cover object-center grayscale contrast-125 transition-transform duration-700 group-hover:scale-105"
                 loading="lazy"
@@ -139,7 +130,7 @@ export const Home: React.FC = () => {
             View Projects
           </RouterLink>
           <span className="text-[11px] font-mono text-[#86868b] tracking-wide">
-            Available for select internship opportunities and full-time roles.*
+            Available for select game development and full-stack engineering roles.*
           </span>
         </div>
       </section>
@@ -231,10 +222,18 @@ export const Home: React.FC = () => {
                 </div>
               </div>
 
-              <div className="mt-4">
+              <div className="mt-4 flex items-center justify-center gap-4">
                 <RouterLink to="/projects/stylized-isometric-environment" className="btn-apple-blue">
                   Verify Specs
                 </RouterLink>
+                <a
+                  href="https://www.youtube.com/watch?v=oe8kgXNqLFI"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1.5 text-sm font-semibold text-[#2997ff] hover:underline"
+                >
+                  Watch Animation <span className="text-xs">→</span>
+                </a>
               </div>
             </div>
 
@@ -296,11 +295,11 @@ export const Home: React.FC = () => {
                 EXPERIENCE
               </div>
               <div className="md:col-span-9 flex flex-col gap-2">
-                <h3 className="text-lg font-bold text-white leading-tight">Software Engineering Intern</h3>
-                <span className="text-sm text-[#f5a972] font-semibold">Cipher Schools</span>
-                <span className="text-xs text-[#86868b] font-mono">JUNE 2025 – AUG 2025 &bull; SECUNDERABAD, INDIA</span>
+                <h3 className="text-lg font-bold text-white leading-tight">Software Development Trainee</h3>
+                <span className="text-sm text-[#f5a972] font-semibold">Cipher Schools &bull; Summer Internship Program</span>
+                <span className="text-xs text-[#86868b] font-mono">JUNE 2025 – AUG 2025</span>
                 <p className="text-xs text-[#86868b] leading-relaxed mt-2 max-w-xl">
-                  Implemented scalable production-grade algorithm trees and audited team code review processes using standard Git/GitHub collaborative workflows.
+                  Completed intensive training in Data Structures & Algorithms, implemented optimized algorithmic systems, and practiced structured codebase reviews using collaborative Git/GitHub workflows.
                 </p>
               </div>
             </div>
