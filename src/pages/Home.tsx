@@ -198,8 +198,8 @@ export const Home: React.FC = () => {
                 A big zoom forward.
               </h2>
               
-              <p className="text-sm text-[#86868b] leading-relaxed font-medium">
-                Cyber-noir Blender environment featuring advanced lighting, emission maps, baked shadow layers, and custom rotational camera pathing.
+              <p className="text-sm text-[#86868b] leading-relaxed font-medium mt-4">
+                Drafted, modeled, and animated an atmospheric cyber-noir isometric environment utilizing complex lighting nodes, emissive material property tables, and explicit keyframe animations.
               </p>
               
               <ul className="flex flex-col gap-4 text-xs sm:text-sm text-[#86868b] leading-relaxed mt-2 text-left">
