@@ -295,11 +295,11 @@ export const Home: React.FC = () => {
                 EXPERIENCE
               </div>
               <div className="md:col-span-9 flex flex-col gap-2">
-                <h3 className="text-lg font-bold text-white leading-tight">Software Development Trainee</h3>
-                <span className="text-sm text-[#f5a972] font-semibold">Cipher Schools &bull; Summer Internship Program</span>
+                <h3 className="text-lg font-bold text-white leading-tight">Software Engineering Intern</h3>
+                <span className="text-sm text-[#f5a972] font-semibold">Cipher Schools</span>
                 <span className="text-xs text-[#86868b] font-mono">JUNE 2025 – AUG 2025</span>
                 <p className="text-xs text-[#86868b] leading-relaxed mt-2 max-w-xl">
-                  Completed intensive training in Data Structures & Algorithms, implemented optimized algorithmic systems, and practiced structured codebase reviews using collaborative Git/GitHub workflows.
+                  Implemented scalable production-grade algorithm trees and audited team code review processes using standard Git/GitHub collaborative workflows.
                 </p>
               </div>
             </div>
