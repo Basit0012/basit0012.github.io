@@ -201,26 +201,21 @@ export const Home: React.FC = () => {
               <p className="text-sm text-[#86868b] leading-relaxed font-medium">
                 Cyber-noir Blender environment featuring advanced lighting, emission maps, baked shadow layers, and custom rotational camera pathing.
               </p>
-
-              {/* Specs parameters */}
-              <div className="grid grid-cols-2 gap-8 border-t border-white/10 pt-6 mt-2">
-                <div>
-                  <span className="text-3xl sm:text-4xl font-extrabold tracking-tighter text-white block">Up to 3x</span>
-                  <span className="text-xs text-[#86868b] font-medium mt-1.5 block">draw call reductions</span>
-                </div>
-                <div>
-                  <span className="text-3xl sm:text-4xl font-extrabold tracking-tighter text-white block">100%</span>
-                  <span className="text-xs text-[#86868b] font-medium mt-1.5 block">procedural shader nodes</span>
-                </div>
-                <div>
-                  <span className="text-3xl sm:text-4xl font-extrabold tracking-tighter text-white block">45,120</span>
-                  <span className="text-xs text-[#86868b] font-medium mt-1.5 block">vertices optimized</span>
-                </div>
-                <div>
-                  <span className="text-3xl sm:text-4xl font-extrabold tracking-tighter text-white block">Cycles</span>
-                  <span className="text-xs text-[#86868b] font-medium mt-1.5 block">raytrace rendering pass</span>
-                </div>
-              </div>
+              
+              <ul className="flex flex-col gap-4 text-xs sm:text-sm text-[#86868b] leading-relaxed mt-2 text-left">
+                <li className="flex gap-2.5 items-start">
+                  <span className="text-[#f5a972] font-bold select-none">•</span>
+                  <span>Drafted, modeled, and animated an atmospheric cyber-noir isometric environment utilizing complex lighting nodes and emissive material property tables.</span>
+                </li>
+                <li className="flex gap-2.5 items-start">
+                  <span className="text-[#f5a972] font-bold select-none">•</span>
+                  <span>Implemented rigid low-poly meshes, explicit keyframe animations, and camera sequences satisfying an "O Grade" technical execution standard.</span>
+                </li>
+                <li className="flex gap-2.5 items-start">
+                  <span className="text-[#f5a972] font-bold select-none">•</span>
+                  <span>Designed clean, layout-optimized 3D assets constructed specifically for unhindered viewport performance when deployed within external engine levels.</span>
+                </li>
+              </ul>
 
               <div className="mt-4 flex items-center justify-center gap-4">
                 <RouterLink to="/projects/stylized-isometric-environment" className="btn-apple-blue">
