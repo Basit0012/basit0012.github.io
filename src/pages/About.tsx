@@ -13,12 +13,12 @@ export const About: React.FC = () => {
     {
       title: 'Technical Art & Design UI/UX',
       icon: <Paintbrush className="h-5 w-5 text-[#f5a972]" />,
-      skills: ['Blender (Advanced - O Grade Performance)', 'Figma (Interactive Gameplay Interface Wireframing & State Flows)'],
+      skills: ['Shader & Material Node Graph Architecture', 'Blender (Advanced - O Grade Performance)', 'Figma (Interactive Gameplay Interface Wireframing & State Flows)'],
     },
     {
-      title: 'Full-Stack Systems & Cloud Infrastructure',
+      title: 'Systems, Web & Collaboration',
       icon: <Code2 className="h-5 w-5 text-[#f5a972]" />,
-      skills: ['JavaScript', 'TypeScript', 'Node.js', 'React.js', 'Express.js', 'WebSockets', 'HTML5', 'CSS3', 'Tailwind CSS', 'RESTful APIs', 'PostgreSQL', 'MongoDB', 'Git/GitHub'],
+      skills: ['Network WebSockets', 'Version Control (Git/GitHub Branching, Merging, PR Workflows)', 'Visual Studio', 'Technical Documentation', 'JavaScript', 'TypeScript', 'Node.js', 'React.js', 'Tailwind CSS'],
     },
   ];
 

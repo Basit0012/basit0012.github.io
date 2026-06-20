@@ -191,15 +191,15 @@ export const Home: React.FC = () => {
             {/* Content Right */}
             <div className="lg:col-span-5 text-left flex flex-col gap-6">
               <span className="text-xs font-bold tracking-widest text-[#f5a972] uppercase font-mono">
-                TECHNICAL ART CASE STUDY
+                TECHNICAL ART SPEC SHEET
               </span>
               
               <h2 className="text-3xl sm:text-5xl font-extrabold tracking-tighter text-white leading-tight">
-                A big zoom forward.
+                Isometric Environment
               </h2>
               
               <p className="text-sm text-[#86868b] leading-relaxed font-medium mt-4">
-                Drafted, modeled, and animated an atmospheric cyber-noir isometric environment utilizing complex lighting nodes, emissive material property tables, and explicit keyframe animations.
+                3D Environment &amp; Light Pipeline Artist &bull; Built in Blender
               </p>
               
               <ul className="flex flex-col gap-4 text-xs sm:text-sm text-[#86868b] leading-relaxed mt-2 text-left">
@@ -222,7 +222,7 @@ export const Home: React.FC = () => {
                   Verify Specs
                 </RouterLink>
                 <a
-                  href="https://www.youtube.com/watch?v=oe8kgXNqLFI"
+                  href="https://www.youtube.com/watch?v=4lvplNIqsPE"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-1.5 text-sm font-semibold text-[#2997ff] hover:underline"
@@ -236,24 +236,24 @@ export const Home: React.FC = () => {
         </div>
       </section>
 
-      {/* 4. REACT WEB OS SECTION (Core Engine internal processor styling) */}
+      {/* 4. C++ PATHFINDING SECTION (Core Engine internal processor styling) */}
       <section className="relative py-32 border-t border-white/5 bg-[#050505]">
         <div className="mx-auto max-w-7xl px-6 text-center">
           
           <div className="max-w-3xl mx-auto flex flex-col items-center">
             <span className="text-xs font-bold tracking-widest text-[#f5a972] uppercase font-mono">
-              FULL STACK SYSTEM
+              GAME SYSTEMS DEVELOPMENT
             </span>
             <h2 className="text-3xl sm:text-6xl font-extrabold tracking-tighter text-white mt-4 leading-tight">
-              Secure IPC. built for browser performance.
+              Grid Navigation.<br />Optimized for game execution.
             </h2>
             <p className="text-sm sm:text-base text-[#86868b] mt-6 max-w-xl leading-relaxed font-medium">
-              A browser-based operating system desktop simulation. Engineered secure inter-process communication (IPC) protocols, real-time message streaming over WebSockets, and modular app window frames.
+              A standalone 2D navigation grid simulation utilizing native C++ to demonstrate A* pathfinding efficiency, memory pooling, and event loops. Engineered with pointer recycling to prevent heap fragmentation.
             </p>
             
             <div className="mt-8">
-              <RouterLink to="/projects/react-web-os" className="btn-apple-blue">
-                Review OS Architecture
+              <RouterLink to="/projects/cpp-pathfinding" className="btn-apple-blue">
+                Review Pathfinding Specs
               </RouterLink>
             </div>
           </div>
@@ -261,8 +261,8 @@ export const Home: React.FC = () => {
           {/* Full Screen display */}
           <div className="mt-16 max-w-5xl mx-auto rounded-3xl overflow-hidden border border-white/10 shadow-2xl bg-black aspect-[16/9]">
             <img
-              src="/about-illustration.png"
-              alt="React Web OS System Architecture"
+              src="/web-os-illustration.jpg"
+              alt="C++ Pathfinding Simulation Architecture"
               className="w-full h-full object-cover object-center grayscale hover:grayscale-0 transition-all duration-700"
               loading="lazy"
             />

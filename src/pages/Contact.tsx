@@ -50,7 +50,7 @@ export const Contact: React.FC = () => {
     {
       icon: <MapPin className="h-5 w-5 text-[#f5a972]" />,
       label: 'Location',
-      value: 'Secunderabad, India',
+      value: 'Punjab, India',
     },
     {
       icon: <GithubIcon className="h-5 w-5 text-[#f5a972]" />,

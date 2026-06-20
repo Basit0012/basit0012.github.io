@@ -18,7 +18,7 @@ import { Contact } from './pages/Contact';
 // Case Studies Pages
 import { HollowLoop } from './pages/case-studies/HollowLoop';
 import { IsometricEnvironment } from './pages/case-studies/IsometricEnvironment';
-import { ReactWebOS } from './pages/case-studies/ReactWebOS';
+import { CppPathfinding } from './pages/case-studies/CppPathfinding';
 
 // Scroll to Top on route change helper
 const ScrollToTop: React.FC = () => {
@@ -64,7 +64,7 @@ const AppRoutes: React.FC = () => {
             <Route path="/projects" element={<PageWrapper><Projects /></PageWrapper>} />
             <Route path="/projects/hollow-loop" element={<PageWrapper><HollowLoop /></PageWrapper>} />
             <Route path="/projects/stylized-isometric-environment" element={<PageWrapper><IsometricEnvironment /></PageWrapper>} />
-            <Route path="/projects/react-web-os" element={<PageWrapper><ReactWebOS /></PageWrapper>} />
+            <Route path="/projects/cpp-pathfinding" element={<PageWrapper><CppPathfinding /></PageWrapper>} />
             <Route path="/certifications" element={<PageWrapper><Certifications /></PageWrapper>} />
             <Route path="/contact" element={<PageWrapper><Contact /></PageWrapper>} />
           </Routes>

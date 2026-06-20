@@ -188,7 +188,7 @@ export const Navbar: React.FC = () => {
                 
                 <div className="flex flex-col gap-1 text-xs text-white/40 font-mono mt-4">
                   <span>EMAIL: mdabdbasit@gmail.com</span>
-                  <span>LOCATION: Secunderabad, India</span>
+                  <span>LOCATION: Punjab, India</span>
                 </div>
               </motion.div>
             </div>

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link as RouterLink } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Cpu, Palette, Code2 } from 'lucide-react';
+import { Cpu, Palette } from 'lucide-react';
 
 interface ProjectItem {
   id: string;
@@ -43,19 +43,19 @@ export const Projects: React.FC = () => {
       tech: ['Blender', 'Advanced rendering', 'Light Baking', 'Emissive Shaders', 'Animation', 'Viewport Optimization'],
       path: '/projects/stylized-isometric-environment',
       icon: <Palette className="h-4 w-4 text-[#f5a972]" />,
-      videoUrl: 'https://www.youtube.com/watch?v=oe8kgXNqLFI'
+      videoUrl: 'https://www.youtube.com/watch?v=4lvplNIqsPE'
     },
     {
-      id: 'react-web-os',
-      title: 'React Web OS & Secure Inter-Process Communication System',
-      category: 'Full Stack',
-      role: 'Full-Stack Engineering Intern',
-      desc: 'Engineered an interactive browser-simulated environment using React.js, Tailwind CSS, and Vite to execute fluid UI scaling and granular client-side state adjustments. Created a bidirectional communications infrastructure featuring Node.js and WebSockets handling high-frequency packet transmission and server synchronization.',
+      id: 'cpp-pathfinding',
+      title: 'C++ Navigation & Pathfinding Engine Simulation',
+      category: 'Game Development',
+      role: 'Core Systems Programmer',
+      desc: 'Developed a lightweight, standalone 2D navigation grid simulation utilizing native C++ to demonstrate algorithmic pathfinding efficiency and game-loop execution constraints. Implemented specialized data structures to manage spatial node parsing, preventing heap fragmentation and reducing overhead via runtime pointer recycling.',
       img: '/web-os-illustration.jpg',
-      tech: ['React.js', 'Node.js', 'WebSockets', 'Tailwind CSS', 'Vite', 'Express.js', 'Git/GitHub'],
-      path: '/projects/react-web-os',
-      icon: <Code2 className="h-4 w-4 text-[#f5a972]" />,
-      githubUrl: 'https://github.com/Basit0012/OS_Project'
+      tech: ['C++', 'Pathfinding Algorithms', 'Memory Pooling', 'Spatial Node Parsing', 'Game Loops', 'Optimizations'],
+      path: '/projects/cpp-pathfinding',
+      icon: <Cpu className="h-4 w-4 text-[#f5a972]" />,
+      githubUrl: 'https://github.com/Basit0012/Cpp-Navigation-Pathfinding-Engine-Simulation'
     }
   ];
 

@@ -25,6 +25,7 @@ export const Certifications: React.FC = () => {
       date: 'January 2025',
       credentialId: 'OCI-AI-2025-991204',
       verifyUrl: 'https://education.oracle.com/',
+      pdfUrl: '/Basit_OCI_AI_Foundations.pdf',
       color: '#F80000'
     },
     {
@@ -34,15 +35,16 @@ export const Certifications: React.FC = () => {
       date: 'February 2025',
       credentialId: 'ODP-F-2025-881240',
       verifyUrl: 'https://education.oracle.com/',
+      pdfUrl: '/Basit_Oracle_Data_Platform.pdf',
       color: '#F80000'
     },
     {
       id: 'iit-ux',
-      title: 'UX Design Principles Certification',
+      title: 'User Experience (UX) Design Principles Certification',
       issuer: 'IIT Roorkee',
       date: 'April 2025',
       credentialId: 'IITR-UX-2025-77A12',
-      verifyUrl: 'https://iitr.ac.in/',
+      verifyUrl: 'https://www.linkedin.com/in/md-abdul-basit18/overlay/Certifications/1965308968/treasury/?profileId=ACoAAFoQofEB-WWyogYG4r3rlmZOYqR6-C-htaU',
       color: '#0071e3'
     },
     {
@@ -71,7 +73,12 @@ export const Certifications: React.FC = () => {
       {/* Grid of Certs */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-left">
         {certs.map((cert, idx) => (
-          <GlassCard key={cert.id} delay={idx * 0.05} className="flex flex-col justify-between p-8 border border-white/10 bg-[#050505] rounded-3xl h-64">
+          <GlassCard 
+            key={cert.id} 
+            delay={idx * 0.05} 
+            onClick={() => setActiveCert(cert)}
+            className="flex flex-col justify-between p-8 border border-white/10 bg-[#050505] rounded-3xl h-64 cursor-pointer"
+          >
             <div>
               <div className="flex items-center gap-2 text-xs font-bold text-[#86868b] uppercase font-mono">
                 <Award className="h-4.5 w-4.5" style={{ color: cert.color }} />
@@ -85,13 +92,16 @@ export const Certifications: React.FC = () => {
 
             <div className="flex items-center justify-between mt-auto">
               <span className="text-xs text-[#86868b] font-mono">{cert.date}</span>
-              <button
-                onClick={() => setActiveCert(cert)}
+              <a
+                href={cert.pdfUrl || cert.verifyUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={(e) => e.stopPropagation()}
                 className="flex items-center gap-1.5 rounded-full border border-white/10 bg-white/5 hover:bg-white/10 px-4 py-2 text-xs font-bold text-white transition-all duration-300"
               >
-                Verify
+                {cert.pdfUrl ? 'View PDF' : 'Verify'}
                 <ShieldCheck className="h-3.5 w-3.5 text-[#0071e3]" />
-              </button>
+              </a>
             </div>
           </GlassCard>
         ))}
