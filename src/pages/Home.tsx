@@ -284,18 +284,20 @@ export const Home: React.FC = () => {
 
           <div className="flex flex-col border-t border-white/10">
             
-            {/* Experience Block */}
+            {/* Training Block */}
             <div className="grid grid-cols-1 md:grid-cols-12 py-8 border-b border-white/10 items-start gap-4">
               <div className="md:col-span-3 text-xs font-bold tracking-widest text-[#86868b] uppercase font-mono">
-                EXPERIENCE
+                TRAINING
               </div>
               <div className="md:col-span-9 flex flex-col gap-2">
-                <h3 className="text-lg font-bold text-white leading-tight">Software Engineering Intern</h3>
+                <h3 className="text-lg font-bold text-white leading-tight">Software Engineering Training Program</h3>
                 <span className="text-sm text-[#f5a972] font-semibold">Cipher Schools</span>
                 <span className="text-xs text-[#86868b] font-mono">JUNE 2025 – AUG 2025</span>
-                <p className="text-xs text-[#86868b] leading-relaxed mt-2 max-w-xl">
-                  Implemented scalable production-grade algorithm trees and audited team code review processes using standard Git/GitHub collaborative workflows.
-                </p>
+                <ul className="text-xs text-[#86868b] leading-relaxed mt-2 max-w-xl list-disc pl-4 flex flex-col gap-1.5">
+                  <li>Completed project-based training in software development and algorithm design.</li>
+                  <li>Gained practical experience with Git, GitHub, debugging, and collaborative workflows.</li>
+                  <li>Applied DSA concepts through coding challenges and mini-projects.</li>
+                </ul>
               </div>
             </div>
 
