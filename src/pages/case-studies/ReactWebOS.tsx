@@ -78,7 +78,7 @@ export class SecureIPCChannel extends EventEmitter {
       {/* Main Image Block */}
       <div className="rounded-3xl overflow-hidden border border-white/10 bg-black aspect-[16/9] mb-16 shadow-2xl">
         <img
-          src="/about-illustration.png"
+          src="/web-os-illustration.jpg"
           alt="React Web OS screenshot"
           className="w-full h-full object-cover object-center grayscale hover:grayscale-0 transition-all duration-700"
         />
@@ -162,6 +162,18 @@ export class SecureIPCChannel extends EventEmitter {
                 <text x="260" y="125" className="muted-label">IPC Event</text>
                 <text x="540" y="145" className="muted-label">Stream Port</text>
               </svg>
+            </div>
+          </div>
+
+          {/* Security Visual Section */}
+          <div className="flex flex-col gap-4">
+            <h3 className="text-xl sm:text-2xl font-bold tracking-tight text-white mb-2">Secure IPC Verification</h3>
+            <div className="rounded-3xl overflow-hidden border border-white/10 bg-[#050505] aspect-[16/9] mb-8 shadow-xl">
+              <img
+                src="/secure-ipc-illustration.jpg"
+                alt="Secure IPC Cryptographic Padlock"
+                className="w-full h-full object-cover object-center grayscale hover:grayscale-0 transition-all duration-700"
+              />
             </div>
           </div>
 

@@ -49,7 +49,7 @@ export const Projects: React.FC = () => {
       category: 'Full Stack',
       role: 'Full-Stack Engineering Intern',
       desc: 'Engineered an interactive browser-simulated environment using React.js, Tailwind CSS, and Vite to execute fluid UI scaling and granular client-side state adjustments. Created a bidirectional communications infrastructure featuring Node.js and WebSockets handling high-frequency packet transmission and server synchronization.',
-      img: '/about-illustration.png',
+      img: '/web-os-illustration.jpg',
       tech: ['React.js', 'Node.js', 'WebSockets', 'Tailwind CSS', 'Vite', 'Express.js', 'Git/GitHub'],
       path: '/projects/react-web-os',
       icon: <Code2 className="h-4 w-4 text-[#f5a972]" />
