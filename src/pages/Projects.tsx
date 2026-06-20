@@ -14,6 +14,7 @@ interface ProjectItem {
   path: string;
   icon: React.ReactNode;
   videoUrl?: string;
+  githubUrl?: string;
 }
 
 export const Projects: React.FC = () => {
@@ -29,7 +30,8 @@ export const Projects: React.FC = () => {
       img: '/unity-game.png',
       tech: ['C#', 'Unity Engine', 'OOP Architecture', '3D Vector Math', 'Memory Management', 'DSA'],
       path: '/projects/hollow-loop',
-      icon: <Cpu className="h-4 w-4 text-[#f5a972]" />
+      icon: <Cpu className="h-4 w-4 text-[#f5a972]" />,
+      githubUrl: 'https://github.com/Basit0012/HollowLoop'
     },
     {
       id: 'stylized-isometric-environment',
@@ -52,7 +54,8 @@ export const Projects: React.FC = () => {
       img: '/web-os-illustration.jpg',
       tech: ['React.js', 'Node.js', 'WebSockets', 'Tailwind CSS', 'Vite', 'Express.js', 'Git/GitHub'],
       path: '/projects/react-web-os',
-      icon: <Code2 className="h-4 w-4 text-[#f5a972]" />
+      icon: <Code2 className="h-4 w-4 text-[#f5a972]" />,
+      githubUrl: 'https://github.com/Basit0012/OS_Project'
     }
   ];
 
@@ -155,10 +158,20 @@ export const Projects: React.FC = () => {
                   ))}
                 </div>
 
-                <div className="mt-4 flex items-center gap-4">
+                <div className="mt-4 flex flex-wrap items-center gap-4">
                   <RouterLink to={project.path} className="btn-apple-blue">
                     Read Case Study
                   </RouterLink>
+                  {project.githubUrl && (
+                    <a
+                      href={project.githubUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="btn-apple-secondary"
+                    >
+                      GitHub Repository
+                    </a>
+                  )}
                   {project.videoUrl && (
                     <a
                       href={project.videoUrl}

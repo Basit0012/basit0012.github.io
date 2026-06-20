@@ -63,16 +63,26 @@ export class SecureIPCChannel extends EventEmitter {
       </div>
 
       {/* Hero Header */}
-      <div className="text-left mb-16">
-        <span className="text-xs font-bold tracking-widest text-[#f5a972] uppercase font-mono">
-          SYSTEM ARCHITECTURE SPEC SHEET
-        </span>
-        <h1 className="text-3xl sm:text-6xl font-extrabold tracking-tighter mt-4 leading-none">
-          React Web OS
-        </h1>
-        <h2 className="mt-4 text-lg sm:text-xl font-medium text-[#86868b]">
-          Full-Stack Engineering Intern &bull; Browser Operating System &amp; Secure IPC
-        </h2>
+      <div className="text-left mb-16 flex flex-col sm:flex-row sm:items-end sm:justify-between gap-6">
+        <div>
+          <span className="text-xs font-bold tracking-widest text-[#f5a972] uppercase font-mono">
+            SYSTEM ARCHITECTURE SPEC SHEET
+          </span>
+          <h1 className="text-3xl sm:text-6xl font-extrabold tracking-tighter mt-4 leading-none">
+            React Web OS
+          </h1>
+          <h2 className="mt-4 text-lg sm:text-xl font-medium text-[#86868b]">
+            Full-Stack Engineering Intern &bull; Browser Operating System &amp; Secure IPC
+          </h2>
+        </div>
+        <a
+          href="https://github.com/Basit0012/OS_Project"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="btn-apple-blue shrink-0 text-center"
+        >
+          GitHub Repository
+        </a>
       </div>
 
       {/* Main Image Block */}
@@ -162,18 +172,6 @@ export class SecureIPCChannel extends EventEmitter {
                 <text x="260" y="125" className="muted-label">IPC Event</text>
                 <text x="540" y="145" className="muted-label">Stream Port</text>
               </svg>
-            </div>
-          </div>
-
-          {/* Security Visual Section */}
-          <div className="flex flex-col gap-4">
-            <h3 className="text-xl sm:text-2xl font-bold tracking-tight text-white mb-2">Secure IPC Verification</h3>
-            <div className="rounded-3xl overflow-hidden border border-white/10 bg-[#050505] aspect-[16/9] mb-8 shadow-xl">
-              <img
-                src="/secure-ipc-illustration.jpg"
-                alt="Secure IPC Cryptographic Padlock"
-                className="w-full h-full object-cover object-center grayscale hover:grayscale-0 transition-all duration-700"
-              />
             </div>
           </div>
 

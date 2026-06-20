@@ -83,16 +83,26 @@ namespace HollowLoop.Core.Systems
       </div>
 
       {/* Hero Header */}
-      <div className="text-left mb-16">
-        <span className="text-xs font-bold tracking-widest text-[#f5a972] uppercase font-mono">
-          GAMEPLAY PROGRAMMING SPEC SHEET
-        </span>
-        <h1 className="text-3xl sm:text-6xl font-extrabold tracking-tighter mt-4 leading-none">
-          Hollow Loop
-        </h1>
-        <h2 className="mt-4 text-lg sm:text-xl font-medium text-[#86868b]">
-          3D Psychological Horror Game &bull; Powered by Unity
-        </h2>
+      <div className="text-left mb-16 flex flex-col sm:flex-row sm:items-end sm:justify-between gap-6">
+        <div>
+          <span className="text-xs font-bold tracking-widest text-[#f5a972] uppercase font-mono">
+            GAMEPLAY PROGRAMMING SPEC SHEET
+          </span>
+          <h1 className="text-3xl sm:text-6xl font-extrabold tracking-tighter mt-4 leading-none">
+            Hollow Loop
+          </h1>
+          <h2 className="mt-4 text-lg sm:text-xl font-medium text-[#86868b]">
+            3D Psychological Horror Game &bull; Powered by Unity
+          </h2>
+        </div>
+        <a
+          href="https://github.com/Basit0012/HollowLoop"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="btn-apple-blue shrink-0 text-center"
+        >
+          GitHub Repository
+        </a>
       </div>
 
       {/* Main Image Block */}
