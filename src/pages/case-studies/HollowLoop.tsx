@@ -1,6 +1,6 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { ArrowLeft, Cpu, ShieldCheck, Zap, Layers, FileCode, CheckCircle2 } from 'lucide-react';
+import { Link as RouterLink } from 'react-router-dom';
+import { ArrowLeft, FileCode, CheckCircle2 } from 'lucide-react';
 import { GlassCard } from '../../components/ui/GlassCard';
 
 export const HollowLoop: React.FC = () => {
@@ -69,195 +69,155 @@ namespace HollowLoop.Core.Systems
 }`;
 
   return (
-    <div className="mx-auto max-w-7xl px-6 py-12 sm:px-8 lg:px-12 font-sans text-white">
+    <div className="mx-auto max-w-5xl px-6 py-12 font-sans text-white bg-black">
       
       {/* Back to Projects */}
-      <div className="mb-8">
-        <Link 
+      <div className="mb-12">
+        <RouterLink 
           to="/projects"
-          className="inline-flex items-center gap-2 text-xs font-bold text-white/50 hover:text-white transition-colors duration-300"
+          className="inline-flex items-center gap-2 text-xs font-bold text-[#86868b] hover:text-white transition-colors duration-300 font-mono"
         >
           <ArrowLeft className="h-4 w-4" />
-          Back to Projects
-        </Link>
+          BACK TO PROJECTS
+        </RouterLink>
       </div>
 
       {/* Hero Header */}
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start mb-16">
-        
-        {/* Left header */}
-        <div className="lg:col-span-8 text-left">
-          <span className="text-xs font-bold tracking-widest text-[#4F8CFF] uppercase font-mono">
-            GAMEPLAY PROGRAMMING CASE STUDY
-          </span>
-          <h1 className="text-4xl font-extrabold tracking-tight sm:text-6xl mt-2">Hollow Loop</h1>
-          <h2 className="mt-3 text-lg sm:text-xl font-medium text-white/60">
-            3D Psychological Horror Game &bull; Built in Unity
-          </h2>
-          
-          <div className="flex flex-wrap gap-2 mt-6">
-            {['Unity Engine', 'C#', 'Blender', 'OOP Architecture', 'Event-Driven', 'Modular Design'].map((tech) => (
-              <span key={tech} className="text-xs font-semibold px-3 py-1.5 rounded-xl bg-white/5 border border-white/5 text-white/70">
-                {tech}
-              </span>
-            ))}
-          </div>
-        </div>
-
-        {/* Right role summary */}
-        <div className="lg:col-span-4 w-full">
-          <GlassCard className="p-6 text-left border border-[#4F8CFF]/20 bg-[#4F8CFF]/5">
-            <span className="text-[10px] font-mono text-white/40 tracking-wider uppercase block">DEVELOPMENT ROLE</span>
-            <span className="text-xl font-bold text-white block mt-1">Lead Gameplay Systems Programmer</span>
-            <span className="text-xs text-white/50 mt-3 block leading-relaxed">
-              Responsible for the core system architecture, decoupled scene management pipelines, state serialization, and performance optimization.
-            </span>
-          </GlassCard>
-        </div>
+      <div className="text-left mb-16">
+        <span className="text-xs font-bold tracking-widest text-[#f5a972] uppercase font-mono">
+          GAMEPLAY PROGRAMMING SPEC SHEET
+        </span>
+        <h1 className="text-3xl sm:text-6xl font-extrabold tracking-tighter mt-4 leading-none">
+          Hollow Loop
+        </h1>
+        <h2 className="mt-4 text-lg sm:text-xl font-medium text-[#86868b]">
+          3D Psychological Horror Game &bull; Powered by Unity
+        </h2>
       </div>
 
-      {/* Case Study Grid */}
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+      {/* Main Image Block */}
+      <div className="rounded-3xl overflow-hidden border border-white/10 bg-black aspect-[16/9] mb-16 shadow-2xl">
+        <img
+          src="/unity-game.png"
+          alt="Hollow Loop screenshot"
+          className="w-full h-full object-cover object-center grayscale hover:grayscale-0 transition-all duration-700"
+        />
+      </div>
+
+      {/* Specifications Grid */}
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start mb-20 text-left">
         
         {/* Left Column: Details */}
-        <div className="lg:col-span-8 flex flex-col gap-10 text-left">
+        <div className="lg:col-span-8 flex flex-col gap-12">
           
-          {/* Overview */}
-          <GlassCard className="p-8">
-            <h3 className="text-xl font-bold text-white tracking-tight border-b border-white/5 pb-3">Project Overview</h3>
-            <p className="text-sm sm:text-base text-white/70 mt-4 leading-relaxed font-normal">
-              Hollow Loop is a 3D psychological horror game centered around puzzle solving and navigating an eerie, changing mansion environment. Due to the complex events, inventory requirements, and changing states, my main challenge was designing a robust system architecture that prevented code spaghetti, coupled dependencies, and scene transition bugs.
+          <div>
+            <h3 className="text-xl sm:text-2xl font-bold tracking-tight text-white mb-4">Project Overview</h3>
+            <p className="text-sm sm:text-base text-[#86868b] leading-relaxed font-medium">
+              Hollow Loop is a 3D psychological horror game focused on inventory-based solving. My core engineering task was developing decoupled, interface-driven modules that serialized state parameters across checkpoints and loading pipelines without generating memory leaks.
             </p>
-          </GlassCard>
+          </div>
 
-          {/* Gameplay Systems Breakdown */}
-          <GlassCard className="p-8">
-            <h3 className="text-xl font-bold text-white tracking-tight border-b border-white/5 pb-3">Core Systems Engineered</h3>
-            
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-6">
-              <div className="flex flex-col gap-2">
-                <div className="flex items-center gap-2">
-                  <ShieldCheck className="h-4.5 w-4.5 text-[#4F8CFF]" />
-                  <h4 className="text-base font-bold text-white">State Save & Serialization</h4>
-                </div>
-                <p className="text-xs text-white/50 leading-relaxed pl-6">
-                  Developed an interface-driven checkpoint/save script utilizing JSON serialization. Decoupled game entity save states using custom IDs.
-                </p>
+          <div>
+            <h3 className="text-xl sm:text-2xl font-bold tracking-tight text-white mb-6">Systems Architecture</h3>
+            <div className="flex flex-col border-t border-white/10">
+              
+              <div className="py-6 border-b border-white/10 grid grid-cols-1 sm:grid-cols-3 gap-2">
+                <span className="text-xs font-bold text-[#86868b] font-mono uppercase">STATE SAVING</span>
+                <span className="sm:col-span-2 text-xs sm:text-sm text-white/80 leading-relaxed font-medium">
+                  Constructed an interface-driven save manager executing asynchronous local file writes. Uses generic dictionaries mapped to unique entity strings.
+                </span>
               </div>
 
-              <div className="flex flex-col gap-2">
-                <div className="flex items-center gap-2">
-                  <Layers className="h-4.5 w-4.5 text-[#4F8CFF]" />
-                  <h4 className="text-base font-bold text-white">Event-Driven Gameplay</h4>
-                </div>
-                <p className="text-xs text-white/50 leading-relaxed pl-6">
-                  Implemented global publishers and subscribers using C# delegates and Actions. This decoupled door unlocks, triggers, and camera cues from standard update loops.
-                </p>
+              <div className="py-6 border-b border-white/10 grid grid-cols-1 sm:grid-cols-3 gap-2">
+                <span className="text-xs font-bold text-[#86868b] font-mono uppercase">DECOUPLED LOGIC</span>
+                <span className="sm:col-span-2 text-xs sm:text-sm text-white/80 leading-relaxed font-medium">
+                  Utilized C# events and Actions to broker communications between triggers, environmental updates, and visual overlays.
+                </span>
               </div>
 
-              <div className="flex flex-col gap-2">
-                <div className="flex items-center gap-2">
-                  <Cpu className="h-4.5 w-4.5 text-[#4F8CFF]" />
-                  <h4 className="text-base font-bold text-white">Decoupled Inventory System</h4>
-                </div>
-                <p className="text-xs text-white/50 leading-relaxed pl-6">
-                  Engineered a slot-based grid inventory using scriptable objects for item definitions and custom triggers for visual updates.
-                </p>
+              <div className="py-6 border-b border-white/10 grid grid-cols-1 sm:grid-cols-3 gap-2">
+                <span className="text-xs font-bold text-[#86868b] font-mono uppercase">INVENTORY PIPELINES</span>
+                <span className="sm:col-span-2 text-xs sm:text-sm text-white/80 leading-relaxed font-medium">
+                  Designed modular ScriptableObjects containing slot weights and item characteristics, dynamically instantiated on pickup.
+                </span>
               </div>
 
-              <div className="flex flex-col gap-2">
-                <div className="flex items-center gap-2">
-                  <Zap className="h-4.5 w-4.5 text-[#4F8CFF]" />
-                  <h4 className="text-base font-bold text-white">Asynchronous Scene Pipeline</h4>
-                </div>
-                <p className="text-xs text-white/50 leading-relaxed pl-6">
-                  Managed multi-scene loading with transition thresholds, preventing frame rate stutter during heavy asset loads.
-                </p>
-              </div>
             </div>
-          </GlassCard>
+          </div>
 
           {/* Code Section */}
-          <GlassCard className="p-8">
-            <div className="flex items-center justify-between border-b border-white/5 pb-3">
+          <div className="flex flex-col gap-4">
+            <div className="flex items-center justify-between border-b border-white/10 pb-3">
               <h3 className="text-xl font-bold text-white tracking-tight flex items-center gap-2">
-                <FileCode className="h-5 w-5 text-[#4F8CFF]" />
-                Gameplay Serialization Snippet
+                <FileCode className="h-5 w-5 text-[#f5a972]" />
+                State Serializer Implementation
               </h3>
-              <span className="text-[10px] font-mono text-white/40">C# SCRIPT</span>
+              <span className="text-[10px] font-mono text-[#86868b]">C# CLASSTEMPLATE</span>
             </div>
             
-            {/* Code Block Container */}
-            <div className="mt-6 rounded-xl border border-white/5 bg-black/60 p-4 font-mono text-xs overflow-x-auto leading-relaxed max-h-[400px]">
-              <pre className="text-left text-white/80">
+            <div className="rounded-2xl border border-white/10 bg-[#050505] p-6 font-mono text-xs overflow-x-auto leading-relaxed max-h-[380px]">
+              <pre className="text-left text-white/70">
                 <code>{codeSnippet}</code>
               </pre>
             </div>
-          </GlassCard>
+          </div>
 
         </div>
 
-        {/* Right Column: Specifications & Performance */}
-        <div className="lg:col-span-4 flex flex-col gap-8 text-left">
+        {/* Right Column: Spec Metrics */}
+        <div className="lg:col-span-4 flex flex-col gap-8">
           
-          {/* Engine Parameters */}
-          <GlassCard className="p-6">
-            <h3 className="text-lg font-bold text-white tracking-tight border-b border-white/5 pb-2">Technical specs</h3>
-            
-            <div className="flex flex-col gap-4 mt-4 text-xs font-mono">
+          <GlassCard className="p-6 text-left border border-white/10 bg-[#050505] rounded-2xl">
+            <h3 className="text-xs font-bold tracking-widest text-[#86868b] uppercase font-mono border-b border-white/10 pb-3">
+              TECHNICAL SPECIFICATIONS
+            </h3>
+            <div className="flex flex-col gap-4 mt-6 text-xs font-mono">
               <div className="flex items-center justify-between">
                 <span className="text-white/40">ENGINE</span>
-                <span className="text-white">Unity 2022.3 LTS</span>
-              </div>
-              <div className="flex items-center justify-between">
-                <span className="text-white/40">RENDER PIPELINE</span>
-                <span className="text-white">URP (Universal Render)</span>
+                <span className="text-white font-bold">Unity 2022.3 LTS</span>
               </div>
               <div className="flex items-center justify-between">
                 <span className="text-white/40">LANGUAGE</span>
-                <span className="text-white">C# / Mono</span>
+                <span className="text-white font-bold">C# (Mono runtime)</span>
               </div>
               <div className="flex items-center justify-between">
-                <span className="text-white/40">ARCHITECTURE</span>
-                <span className="text-white">Component & Events</span>
+                <span className="text-white/40">PIPELINE</span>
+                <span className="text-white font-bold">URP Render Loop</span>
               </div>
               <div className="flex items-center justify-between">
-                <span className="text-white/40">ASSETS MODELER</span>
-                <span className="text-white">Blender 3.6 LTS</span>
+                <span className="text-white/40">MODELS</span>
+                <span className="text-white font-bold">Blender 3D mesh</span>
+              </div>
+              <div className="flex items-center justify-between">
+                <span className="text-white/40">SERIALIZER</span>
+                <span className="text-white font-bold">JSON Utility format</span>
               </div>
             </div>
           </GlassCard>
 
-          {/* Performance Optimization Breakdown */}
-          <GlassCard className="p-6">
-            <h3 className="text-lg font-bold text-white tracking-tight border-b border-white/5 pb-2">Optimization Work</h3>
-            
-            <div className="flex flex-col gap-4 mt-6">
-              <div className="flex gap-2.5 items-start">
-                <CheckCircle2 className="h-4.5 w-4.5 text-[#4F8CFF] shrink-0 mt-0.5" />
-                <div className="flex flex-col">
-                  <span className="text-xs font-bold text-white">Garbage Collection Control</span>
-                  <span className="text-[11px] text-white/40 mt-1">Avoided object instantiation inside update cycles, utilizing generic caching templates.</span>
+          <GlassCard className="p-6 text-left border border-white/10 bg-[#050505] rounded-2xl">
+            <h3 className="text-xs font-bold tracking-widest text-[#86868b] uppercase font-mono border-b border-white/10 pb-3">
+              OPTIMIZATIONS
+            </h3>
+            <div className="flex flex-col gap-5 mt-6">
+              <div className="flex gap-2.5 items-start text-xs">
+                <CheckCircle2 className="h-4.5 w-4.5 text-[#f5a972] shrink-0 mt-0.5" />
+                <div className="flex flex-col gap-1">
+                  <span className="font-bold text-white">LOD Mesh Baking</span>
+                  <span className="text-[#86868b] font-medium leading-relaxed">Reduced poly draw call ranges on distant mansion assets.</span>
                 </div>
               </div>
 
-              <div className="flex gap-2.5 items-start">
-                <CheckCircle2 className="h-4.5 w-4.5 text-[#4F8CFF] shrink-0 mt-0.5" />
-                <div className="flex flex-col">
-                  <span className="text-xs font-bold text-white">Asset Atlasing & Baking</span>
-                  <span className="text-[11px] text-white/40 mt-1">Baked lighting maps and combined diffuse textures in Blender, dropping draw call limits significantly.</span>
-                </div>
-              </div>
-
-              <div className="flex gap-2.5 items-start">
-                <CheckCircle2 className="h-4.5 w-4.5 text-[#4F8CFF] shrink-0 mt-0.5" />
-                <div className="flex flex-col">
-                  <span className="text-xs font-bold text-white">Static Occlusion Culling</span>
-                  <span className="text-[11px] text-white/40 mt-1">Configured occlusion areas in hallways, hiding mansion rooms that were not within the player's frustum.</span>
+              <div className="flex gap-2.5 items-start text-xs">
+                <CheckCircle2 className="h-4.5 w-4.5 text-[#f5a972] shrink-0 mt-0.5" />
+                <div className="flex flex-col gap-1">
+                  <span className="font-bold text-white">GC Allocation Pooling</span>
+                  <span className="text-[#86868b] font-medium leading-relaxed">Reused static variables within physics updates, minimizing overhead.</span>
                 </div>
               </div>
             </div>
           </GlassCard>
+
         </div>
 
       </div>

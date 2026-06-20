@@ -1,18 +1,17 @@
 @import "tailwindcss";
 
 @theme {
-  --color-background: #0A0A0A;
+  --color-background: #000000;
   --color-secondary: #111111;
-  --color-accent: #4F8CFF;
-  --color-text: #FFFFFF;
-  --color-muted: #B3B3B3;
-  --color-glass-card: rgba(255, 255, 255, 0.05);
+  --color-accent: #0071e3;
+  --color-text: #ffffff;
+  --color-muted: #86868b;
+  --color-glass-card: rgba(255, 255, 255, 0.04);
   --color-border: rgba(255, 255, 255, 0.1);
   --font-sans: "SF Pro Display", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 
   --animate-pulse-slow: pulse-slow 8s cubic-bezier(0.4, 0, 0.6, 1) infinite;
   --animate-float: float 6s ease-in-out infinite;
-  --animate-glow: glow 2s ease-in-out infinite;
 }
 
 @keyframes pulse-slow {
@@ -21,26 +20,17 @@
     transform: scale(1);
   }
   50% {
-    opacity: 0.3;
-    transform: scale(1.08);
+    opacity: 0.25;
+    transform: scale(1.04);
   }
 }
 
 @keyframes float {
   0%, 100% {
-    transform: translateY(0px) rotate(0deg);
+    transform: translateY(0px);
   }
   50% {
-    transform: translateY(-10px) rotate(1deg);
-  }
-}
-
-@keyframes glow {
-  0%, 100% {
-    text-shadow: 0 0 15px rgba(79, 140, 255, 0.4);
-  }
-  50% {
-    text-shadow: 0 0 30px rgba(79, 140, 255, 0.8), 0 0 10px rgba(79, 140, 255, 0.4);
+    transform: translateY(-8px);
   }
 }
 
@@ -54,12 +44,12 @@
 
 /* Custom Scrollbar */
 ::-webkit-scrollbar {
-  width: 6px;
-  height: 6px;
+  width: 8px;
+  height: 8px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #0A0A0A;
+  background: #000000;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -69,37 +59,87 @@
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #4F8CFF;
+  background: #0071e3;
 }
 
-/* Custom Utilities */
+/* Apple-inspired typography classes */
+.tracking-tightest {
+  letter-spacing: -0.03em;
+}
+
+.text-hero-title {
+  font-size: clamp(3rem, 12vw, 8.5rem);
+  line-height: 0.95;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+}
+
+.text-hero-sub {
+  font-size: clamp(1.5rem, 5vw, 3rem);
+  line-height: 1.1;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.text-gradient-copper {
+  background: linear-gradient(180deg, #f5a972 0%, #b2531d 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-white {
+  background: linear-gradient(180deg, #ffffff 0%, #a1a1a6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Apple Signature Buttons */
+.btn-apple-blue {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9999px;
+  background-color: #0071e3;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 12px 24px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.btn-apple-blue:hover {
+  background-color: #0077ed;
+  opacity: 0.95;
+  transform: scale(1.02);
+}
+
+.btn-apple-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9999px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background-color: transparent;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 12px 24px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.btn-apple-secondary:hover {
+  background-color: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.5);
+  transform: scale(1.02);
+}
+
 .glassmorphism {
-  background: rgba(255, 255, 255, 0.03);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
+  background: rgba(255, 255, 255, 0.02);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
   border: 1px solid rgba(255, 255, 255, 0.08);
-}
-
-.glassmorphism-glow {
-  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37),
-              inset 0 0 0 1px rgba(255, 255, 255, 0.05);
-}
-
-.text-gradient {
-  background: linear-gradient(135deg, #FFFFFF 0%, #B3B3B3 50%, #4F8CFF 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.text-gradient-accent {
-  background: linear-gradient(90deg, #4F8CFF 0%, #FFFFFF 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.bg-dot-grid {
-  background-image: radial-gradient(rgba(255, 255, 255, 0.07) 1px, transparent 1px);
-  background-size: 24px 24px;
 }
 
 /* Lenis Smooth Scroll Config */

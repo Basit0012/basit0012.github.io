@@ -1,139 +1,105 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { ArrowLeft, Sparkles, Sun, Eye, Film, CheckCircle2 } from 'lucide-react';
+import { Link as RouterLink } from 'react-router-dom';
+import { ArrowLeft, CheckCircle2 } from 'lucide-react';
 import { GlassCard } from '../../components/ui/GlassCard';
 
 export const IsometricEnvironment: React.FC = () => {
   const galleryItems = [
-    { title: 'Beauty Render (Cycles)', type: 'Final color grading and volumetrics', size: '1920x1080' },
-    { title: 'Ambient Occlusion Pass', type: 'Detail contact shadow mapping', size: '1920x1080' },
-    { title: 'Emissive Material Glow', type: 'Shaders bloom mapping', size: '1920x1080' },
+    { title: 'Beauty Render Pass', desc: 'Cycles Raytracing, volumetric light scattering and 32bit color depths.' },
+    { title: 'Contact Shadows Pass', desc: 'Ambient Occlusion layer baked directly into unified texture UV grids.' },
+    { title: 'Emissive Glow Mapping', desc: 'Custom procedural shader noise mixing for flickering neon signboards.' },
   ];
 
   return (
-    <div className="mx-auto max-w-7xl px-6 py-12 sm:px-8 lg:px-12 font-sans text-white">
+    <div className="mx-auto max-w-5xl px-6 py-12 font-sans text-white bg-black">
       
       {/* Back to Projects */}
-      <div className="mb-8">
-        <Link 
+      <div className="mb-12">
+        <RouterLink 
           to="/projects"
-          className="inline-flex items-center gap-2 text-xs font-bold text-white/50 hover:text-white transition-colors duration-300"
+          className="inline-flex items-center gap-2 text-xs font-bold text-[#86868b] hover:text-white transition-colors duration-300 font-mono"
         >
           <ArrowLeft className="h-4 w-4" />
-          Back to Projects
-        </Link>
+          BACK TO PROJECTS
+        </RouterLink>
       </div>
 
       {/* Hero Header */}
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start mb-16">
-        
-        {/* Left header */}
-        <div className="lg:col-span-8 text-left">
-          <span className="text-xs font-bold tracking-widest text-[#4F8CFF] uppercase font-mono">
-            TECHNICAL ART CASE STUDY
-          </span>
-          <h1 className="text-4xl font-extrabold tracking-tight sm:text-6xl mt-2 leading-tight">
-            Stylized Isometric Environment
-          </h1>
-          <h2 className="mt-3 text-lg sm:text-xl font-medium text-white/60">
-            Cyber-Noir Environment Design &amp; Camera Animation &bull; Built in Blender
-          </h2>
-          
-          <div className="flex flex-wrap gap-2 mt-6">
-            {['Blender 3D', 'Cycles & Eevee', 'Procedural Shading', 'Emissive Lights', 'Light Baking', 'Camera Pathing'].map((tech) => (
-              <span key={tech} className="text-xs font-semibold px-3 py-1.5 rounded-xl bg-white/5 border border-white/5 text-white/70">
-                {tech}
-              </span>
-            ))}
-          </div>
-        </div>
-
-        {/* Right role summary */}
-        <div className="lg:col-span-4 w-full">
-          <GlassCard className="p-6 text-left border border-[#4F8CFF]/20 bg-[#4F8CFF]/5">
-            <span className="text-[10px] font-mono text-white/40 tracking-wider uppercase block">DEVELOPMENT ROLE</span>
-            <span className="text-xl font-bold text-white block mt-1">Technical Artist</span>
-            <span className="text-xs text-white/50 mt-3 block leading-relaxed">
-              Designed shaders, baked contact occlusion details, set up the camera rigs, and animated mechanical components.
-            </span>
-          </GlassCard>
-        </div>
+      <div className="text-left mb-16">
+        <span className="text-xs font-bold tracking-widest text-[#f5a972] uppercase font-mono">
+          TECHNICAL ART SPEC SHEET
+        </span>
+        <h1 className="text-3xl sm:text-6xl font-extrabold tracking-tighter mt-4 leading-none">
+          Isometric Environment
+        </h1>
+        <h2 className="mt-4 text-lg sm:text-xl font-medium text-[#86868b]">
+          Cyber-Noir Environment &amp; Rotational Camera Path &bull; Built in Blender
+        </h2>
       </div>
 
-      {/* Case Study Grid */}
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+      {/* Main Image Block */}
+      <div className="rounded-3xl overflow-hidden border border-white/10 bg-black aspect-[16/10] mb-16 shadow-2xl">
+        <img
+          src="/blender-work.png"
+          alt="Blender Isometric Environment render"
+          className="w-full h-full object-cover object-center grayscale hover:grayscale-0 transition-all duration-700"
+        />
+      </div>
+
+      {/* Specifications Grid */}
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start mb-20 text-left">
         
         {/* Left Column: Details */}
-        <div className="lg:col-span-8 flex flex-col gap-10 text-left">
+        <div className="lg:col-span-8 flex flex-col gap-12">
           
-          {/* Overview */}
-          <GlassCard className="p-8">
-            <h3 className="text-xl font-bold text-white tracking-tight border-b border-white/5 pb-3">Project Overview</h3>
-            <p className="text-sm sm:text-base text-white/70 mt-4 leading-relaxed font-normal">
-              This project involves creating a stylized, cyber-noir isometric building block. The core objective was constructing a highly atmospheric environment optimized for real-time engines. Balancing high-fidelity emissive lights, custom volumetric mist, and low texture memory footprint required implementing lightmaps and procedural shader baking.
+          <div>
+            <h3 className="text-xl sm:text-2xl font-bold tracking-tight text-white mb-4">Overview</h3>
+            <p className="text-sm sm:text-base text-[#86868b] leading-relaxed font-medium">
+              A stylized cyberpunk apartment block designed for real-time application pipelines. The project targets optimized mesh densities, light bakes, and procedural shaders, eliminating massive image texture overhead.
             </p>
-          </GlassCard>
+          </div>
 
-          {/* Environment Breakdown */}
-          <GlassCard className="p-8">
-            <h3 className="text-xl font-bold text-white tracking-tight border-b border-white/5 pb-3">Technical Art Breakdown</h3>
-            
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-6">
-              <div className="flex flex-col gap-2">
-                <div className="flex items-center gap-2">
-                  <Sun className="h-4.5 w-4.5 text-[#4F8CFF]" />
-                  <h4 className="text-base font-bold text-white">Atmospheric Lighting</h4>
-                </div>
-                <p className="text-xs text-white/50 leading-relaxed pl-6">
-                  Set up high-contrast area lights simulating cyberpunk neon signs. Combined area light volumes with a subtle scatter volume node to render physical light beams.
-                </p>
+          <div>
+            <h3 className="text-xl sm:text-2xl font-bold tracking-tight text-white mb-6">Artistic Methods</h3>
+            <div className="flex flex-col border-t border-white/10">
+              
+              <div className="py-6 border-b border-white/10 grid grid-cols-1 sm:grid-cols-3 gap-2">
+                <span className="text-xs font-bold text-[#86868b] font-mono uppercase">LIGHT RIGGING</span>
+                <span className="sm:col-span-2 text-xs sm:text-sm text-white/80 leading-relaxed font-medium">
+                  Utilized high-contrast area lamps simulating neon signs. Combined area volumes with volumetric scatter particles to render tangible light beams.
+                </span>
               </div>
 
-              <div className="flex flex-col gap-2">
-                <div className="flex items-center gap-2">
-                  <Sparkles className="h-4.5 w-4.5 text-[#4F8CFF]" />
-                  <h4 className="text-base font-bold text-white">Custom Emissive Shaders</h4>
-                </div>
-                <p className="text-xs text-white/50 leading-relaxed pl-6">
-                  Programmed shader nodes in Blender combining Musgrave texture noises with emissive color ramps, creating flicker frequencies for neon sign grids.
-                </p>
+              <div className="py-6 border-b border-white/10 grid grid-cols-1 sm:grid-cols-3 gap-2">
+                <span className="text-xs font-bold text-[#86868b] font-mono uppercase">PROCEDURAL SHADERS</span>
+                <span className="sm:col-span-2 text-xs sm:text-sm text-white/80 leading-relaxed font-medium">
+                  Programmed shader node chains in Blender, mixing Musgrave and Voronoi math gradients for modular surface rust and flickers.
+                </span>
               </div>
 
-              <div className="flex flex-col gap-2">
-                <div className="flex items-center gap-2">
-                  <Eye className="h-4.5 w-4.5 text-[#4F8CFF]" />
-                  <h4 className="text-base font-bold text-white">Lightmaps & Texture Baking</h4>
-                </div>
-                <p className="text-xs text-white/50 leading-relaxed pl-6">
-                  Baked ambient occlusion passes and diffuse colors directly into unified coordinate UV templates, reducing runtime compute resources for the environment blocks.
-                </p>
+              <div className="py-6 border-b border-white/10 grid grid-cols-1 sm:grid-cols-3 gap-2">
+                <span className="text-xs font-bold text-[#86868b] font-mono uppercase">LIGHT BAKING</span>
+                <span className="sm:col-span-2 text-xs sm:text-sm text-white/80 leading-relaxed font-medium">
+                  Baked contact ambient occlusion maps directly into single texture layouts, reducing GPU draw calculations inside runtime engines.
+                </span>
               </div>
 
-              <div className="flex flex-col gap-2">
-                <div className="flex items-center gap-2">
-                  <Film className="h-4.5 w-4.5 text-[#4F8CFF]" />
-                  <h4 className="text-base font-bold text-white">Cinematic Camera Rig</h4>
-                </div>
-                <p className="text-xs text-white/50 leading-relaxed pl-6">
-                  Constrained camera movement to bezier curve paths with follow-targets, ensuring a smooth, fluid rotational flyover matching showcase animations.
-                </p>
-              </div>
             </div>
-          </GlassCard>
+          </div>
 
-          {/* Interactive Rendering Gallery Section */}
-          <div className="flex flex-col gap-6">
-            <h3 className="text-xl font-bold text-white tracking-tight border-b border-white/5 pb-3">Rendering Breakdown Passes</h3>
-            
+          {/* Render Passes Grid */}
+          <div>
+            <h3 className="text-xl sm:text-2xl font-bold tracking-tight text-white mb-8">Rendering Passes Specifications</h3>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
               {galleryItems.map((item, idx) => (
-                <GlassCard key={item.title} delay={idx * 0.05} className="flex flex-col justify-between text-left p-6 h-48 border border-white/5 hover:border-[#4F8CFF]/30">
-                  <div className="flex flex-col">
-                    <span className="text-[10px] font-mono text-white/40 tracking-wider uppercase">PASS 0{idx + 1}</span>
-                    <span className="text-base font-bold text-white mt-1.5 leading-snug">{item.title}</span>
-                    <span className="text-xs text-[#4F8CFF] mt-1 font-mono">{item.size}</span>
+                <GlassCard key={item.title} className="p-6 text-left border border-white/10 bg-[#050505] rounded-2xl flex flex-col justify-between h-44">
+                  <div className="flex flex-col gap-1">
+                    <span className="text-[10px] font-mono text-[#f5a972] uppercase font-bold">PASS 0{idx + 1}</span>
+                    <span className="text-sm font-bold text-white leading-tight mt-1">{item.title}</span>
                   </div>
-                  <span className="text-xs text-white/50 font-normal leading-relaxed">{item.type}</span>
+                  <p className="text-xs text-[#86868b] leading-relaxed font-medium">
+                    {item.desc}
+                  </p>
                 </GlassCard>
               ))}
             </div>
@@ -141,67 +107,60 @@ export const IsometricEnvironment: React.FC = () => {
 
         </div>
 
-        {/* Right Column: Spec Grid & Shader Node Parameters */}
-        <div className="lg:col-span-4 flex flex-col gap-8 text-left">
+        {/* Right Column: Spec Metrics */}
+        <div className="lg:col-span-4 flex flex-col gap-8">
           
-          {/* Modeling Specs */}
-          <GlassCard className="p-6">
-            <h3 className="text-lg font-bold text-white tracking-tight border-b border-white/5 pb-2">Mesh Statistics</h3>
-            
-            <div className="flex flex-col gap-4 mt-4 text-xs font-mono">
+          <GlassCard className="p-6 text-left border border-white/10 bg-[#050505] rounded-2xl">
+            <h3 className="text-xs font-bold tracking-widest text-[#86868b] uppercase font-mono border-b border-white/10 pb-3">
+              MESH STATISTICS
+            </h3>
+            <div className="flex flex-col gap-4 mt-6 text-xs font-mono">
               <div className="flex items-center justify-between">
                 <span className="text-white/40">VERTICES</span>
-                <span className="text-white">45,120</span>
+                <span className="text-white font-bold">45,120</span>
               </div>
               <div className="flex items-center justify-between">
                 <span className="text-white/40">EDGES</span>
-                <span className="text-white">88,240</span>
+                <span className="text-white font-bold">88,240</span>
               </div>
               <div className="flex items-center justify-between">
                 <span className="text-white/40">TRIANGLES</span>
-                <span className="text-white">78,560</span>
+                <span className="text-white font-bold">78,560</span>
               </div>
               <div className="flex items-center justify-between">
-                <span className="text-white/40">UV MAP SHEETS</span>
-                <span className="text-white">2 Unified Sheets</span>
+                <span className="text-white/40">UV SHEETS</span>
+                <span className="text-white font-bold">2 Unified Layouts</span>
               </div>
               <div className="flex items-center justify-between">
-                <span className="text-white/40">RENDER SYSTEM</span>
-                <span className="text-white">Cycles Raytracer</span>
+                <span className="text-white/40">RENDERER</span>
+                <span className="text-white font-bold">Cycles Path-Tracer</span>
               </div>
             </div>
           </GlassCard>
 
-          {/* Shader Parameter Details */}
-          <GlassCard className="p-6">
-            <h3 className="text-lg font-bold text-white tracking-tight border-b border-white/5 pb-2">Shading Techniques</h3>
-            
-            <div className="flex flex-col gap-4 mt-6">
-              <div className="flex gap-2.5 items-start">
-                <CheckCircle2 className="h-4.5 w-4.5 text-[#4F8CFF] shrink-0 mt-0.5" />
-                <div className="flex flex-col">
-                  <span className="text-xs font-bold text-white">Procedural Noise Mixing</span>
-                  <span className="text-[11px] text-white/40 mt-1">Constructed modular dirt and rust wear mapping directly using gradient math nodes without image templates.</span>
+          <GlassCard className="p-6 text-left border border-white/10 bg-[#050505] rounded-2xl">
+            <h3 className="text-xs font-bold tracking-widest text-[#86868b] uppercase font-mono border-b border-white/10 pb-3">
+              MATERIAL SPECS
+            </h3>
+            <div className="flex flex-col gap-5 mt-6">
+              <div className="flex gap-2.5 items-start text-xs">
+                <CheckCircle2 className="h-4.5 w-4.5 text-[#f5a972] shrink-0 mt-0.5" />
+                <div className="flex flex-col gap-1">
+                  <span className="font-bold text-white">Sub-Surface Scatter</span>
+                  <span className="text-[#86868b] font-medium leading-relaxed">Simulated thickness scatter parameters on polymer pipes.</span>
                 </div>
               </div>
 
-              <div className="flex gap-2.5 items-start">
-                <CheckCircle2 className="h-4.5 w-4.5 text-[#4F8CFF] shrink-0 mt-0.5" />
-                <div className="flex flex-col">
-                  <span className="text-xs font-bold text-white">Sub-Surface Scattering (SSS)</span>
-                  <span className="text-[11px] text-white/40 mt-1">Configured thickness parameters on plastic cables and pipes to scatter light realistically from neon sources.</span>
-                </div>
-              </div>
-
-              <div className="flex gap-2.5 items-start">
-                <CheckCircle2 className="h-4.5 w-4.5 text-[#4F8CFF] shrink-0 mt-0.5" />
-                <div className="flex flex-col">
-                  <span className="text-xs font-bold text-white">Volume Absorption Maps</span>
-                  <span className="text-[11px] text-white/40 mt-1">Integrated volume absorption inside glass capsules, simulating glowing liquid tanks.</span>
+              <div className="flex gap-2.5 items-start text-xs">
+                <CheckCircle2 className="h-4.5 w-4.5 text-[#f5a972] shrink-0 mt-0.5" />
+                <div className="flex flex-col gap-1">
+                  <span className="font-bold text-white">Emission Nodes</span>
+                  <span className="text-[#86868b] font-medium leading-relaxed">Integrated Bloom and glow multipliers for high contrast cyberpunk vibes.</span>
                 </div>
               </div>
             </div>
           </GlassCard>
+
         </div>
 
       </div>

@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link as RouterLink } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-import { GlassCard } from '../components/ui/GlassCard';
-import { Star, Cpu, Palette, Code2 } from 'lucide-react';
+import { Cpu, Palette, Code2 } from 'lucide-react';
 
 interface ProjectItem {
   id: string;
@@ -25,33 +24,33 @@ export const Projects: React.FC = () => {
       title: 'Hollow Loop',
       category: 'Game Development',
       role: 'Lead Gameplay Systems Programmer',
-      desc: 'A 3D psychological horror game designed with a highly modular architecture in Unity. Built custom inventory utilities, robust checkpoint/save databases, dynamic scene loading pipelines, and event-driven gameplay scripts.',
+      desc: '3D psychological horror game engineered in Unity. Designed event-driven gameplay triggers, slot-based inventory systems, checkpoint serialization, and custom asynchronous scene loaders.',
       img: '/unity-game.png',
-      tech: ['Unity', 'C#', 'Blender', 'OOP', 'Gameplay systems', 'Serialization'],
+      tech: ['Unity Engine', 'C# scripts', 'ScriptableObjects', 'Save Serializer', 'ASync Pipelines'],
       path: '/projects/hollow-loop',
-      icon: <Cpu className="h-4 w-4 text-[#4F8CFF]" />
+      icon: <Cpu className="h-4 w-4 text-[#f5a972]" />
     },
     {
       id: 'stylized-isometric-environment',
       title: 'Stylized Isometric Environment Animation',
       category: 'Technical Art',
       role: 'Technical Artist',
-      desc: 'A futuristic cyber-noir environment built in Blender. Leveraged custom vertex colors, emissive shaders, baking techniques, ambient occlusion nodes, and custom animation cycles to produce detailed cinematic renders.',
+      desc: 'Cyberpunk styled environment designed in Blender. Configured area lighting rigs, procedural emission shader nodes, custom baking setups, and animated flyover camera path nodes.',
       img: '/blender-work.png',
-      tech: ['Blender', 'Environment Design', 'Lighting', 'Animation', 'Shader Emission', 'Rendering'],
+      tech: ['Blender 3D', 'Cycles raytracer', 'Procedural Shading', 'Shadow Baking', 'Animation'],
       path: '/projects/stylized-isometric-environment',
-      icon: <Palette className="h-4 w-4 text-[#4F8CFF]" />
+      icon: <Palette className="h-4 w-4 text-[#f5a972]" />
     },
     {
       id: 'react-web-os',
       title: 'React Web OS & Secure IPC System',
       category: 'Full Stack',
       role: 'Full Stack Engineer',
-      desc: 'A browser-based operating system desktop simulation. Engineered secure inter-process communication (IPC) protocols, real-time message streaming over WebSockets, modular app window frames, and backend endpoints.',
+      desc: 'Browser desktop simulation platform. Scripted inter-process communication channels with validation hashes, real-time message streaming over WebSockets, and state managers.',
       img: '/about-illustration.png',
-      tech: ['React', 'Node.js', 'WebSockets', 'Tailwind CSS', 'IPC Protocols', 'Express'],
+      tech: ['React 19', 'TypeScript typings', 'WebSocket feeds', 'Tailwind CSS', 'Node.js backend'],
       path: '/projects/react-web-os',
-      icon: <Code2 className="h-4 w-4 text-[#4F8CFF]" />
+      icon: <Code2 className="h-4 w-4 text-[#f5a972]" />
     }
   ];
 
@@ -67,32 +66,31 @@ export const Projects: React.FC = () => {
     : projectsData.filter(p => p.category === filter);
 
   return (
-    <div className="mx-auto max-w-7xl px-6 py-12 sm:px-8 lg:px-12 font-sans text-white">
+    <div className="mx-auto max-w-5xl px-6 py-12 font-sans text-white bg-black">
       
       {/* Header */}
-      <div className="text-left mb-12">
-        <span className="text-xs font-bold tracking-widest text-[#4F8CFF] uppercase">02. WORKCASE</span>
-        <h1 className="text-3xl font-extrabold tracking-tight sm:text-5xl mt-2">Projects Showcase</h1>
-        <p className="text-sm text-white/50 mt-3 max-w-lg leading-relaxed">
-          Explore case studies covering gameplay systems engineering, custom shader modeling, and full-stack software development.
+      <div className="text-left mb-16">
+        <span className="text-xs font-bold tracking-widest text-[#f5a972] uppercase font-mono">02. WORKCASE</span>
+        <h1 className="text-3xl sm:text-6xl font-extrabold tracking-tighter mt-4 leading-none">Projects</h1>
+        <p className="text-sm text-[#86868b] mt-4 max-w-lg leading-relaxed font-medium">
+          Detailed case studies demonstrating gameplay engineering, shader modeling, and full-stack software development.
         </p>
       </div>
 
       {/* Filter Tabs */}
-      <div className="flex flex-wrap gap-2.5 mb-12 pb-4 border-b border-white/5 justify-start">
+      <div className="flex flex-wrap gap-2.5 mb-16 pb-4 border-b border-white/10 justify-start">
         {categories.map((cat) => (
           <button
             key={cat}
             onClick={() => setFilter(cat)}
-            className={`relative px-4 py-2 text-xs sm:text-sm font-semibold tracking-wide rounded-xl transition-colors duration-300 ${
-              filter === cat ? 'text-[#4F8CFF]' : 'text-white/60 hover:text-white'
+            className={`relative px-4 py-2 text-xs sm:text-sm font-semibold tracking-wide rounded-full transition-colors duration-300 ${
+              filter === cat ? 'text-[#f5a972]' : 'text-[#86868b] hover:text-white'
             }`}
           >
-            {/* Background pill shape on selection */}
             {filter === cat && (
               <motion.span
                 layoutId="activeFilterPill"
-                className="absolute inset-0 bg-[#4F8CFF]/10 border border-[#4F8CFF]/20 rounded-xl"
+                className="absolute inset-0 bg-white/5 border border-white/10 rounded-full"
                 transition={{ type: "spring", stiffness: 380, damping: 30 }}
               />
             )}
@@ -101,80 +99,70 @@ export const Projects: React.FC = () => {
         ))}
       </div>
 
-      {/* Grid of Projects */}
-      <motion.div 
-        layout 
-        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
-      >
+      {/* Grid of Projects (Vertical specs layout) */}
+      <div className="flex flex-col gap-20">
         <AnimatePresence mode="popLayout">
-          {filteredProjects.map((project, idx) => (
+          {filteredProjects.map((project) => (
             <motion.div
               layout
-              initial={{ opacity: 0, scale: 0.95 }}
-              animate={{ opacity: 1, scale: 1 }}
-              exit={{ opacity: 0, scale: 0.95 }}
-              transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -30 }}
+              transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
               key={project.id}
-              className="h-full"
+              className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center border-b border-white/10 pb-16"
             >
-              <GlassCard hoverGlow delay={idx * 0.05} className="flex flex-col h-full !p-0">
-                {/* Visual Banner */}
-                <div className="relative aspect-[16/10] w-full overflow-hidden border-b border-white/5 bg-[#111]">
-                  <img
-                    src={project.img}
-                    alt={project.title}
-                    className="w-full h-full object-cover object-center transition-transform duration-500 hover:scale-105"
-                    loading="lazy"
-                  />
-                  
-                  {/* Category overlay label */}
-                  <div className="absolute top-3 left-3 glassmorphism rounded-lg px-2.5 py-1 text-[10px] font-bold text-[#4F8CFF] uppercase border border-white/10 flex items-center gap-1.5">
-                    {project.icon}
-                    {project.category}
-                  </div>
+              {/* Visual Left */}
+              <div className="lg:col-span-6 rounded-3xl overflow-hidden border border-white/10 shadow-2xl bg-black aspect-[16/10]">
+                <img
+                  src={project.img}
+                  alt={project.title}
+                  className="w-full h-full object-cover object-center grayscale hover:grayscale-0 transition-all duration-700"
+                  loading="lazy"
+                />
+              </div>
+
+              {/* Specs Right */}
+              <div className="lg:col-span-6 text-left flex flex-col gap-4">
+                <div className="flex items-center gap-2 text-xs font-bold text-[#f5a972] uppercase font-mono">
+                  {project.icon}
+                  <span>{project.category}</span>
                 </div>
 
-                {/* Body Details */}
-                <div className="p-6 flex flex-col justify-between flex-1 text-left">
-                  <div>
-                    <span className="text-[10px] font-mono text-white/40 tracking-wider uppercase block mb-1">
-                      ROLE: {project.role}
-                    </span>
-                    <h3 className="text-xl font-bold text-white tracking-tight leading-snug">
-                      {project.title}
-                    </h3>
-                    <p className="text-sm text-white/50 mt-3 leading-relaxed">
-                      {project.desc}
-                    </p>
-                  </div>
+                <h3 className="text-2xl sm:text-4xl font-extrabold tracking-tight text-white leading-tight">
+                  {project.title}
+                </h3>
+                
+                <span className="text-xs font-bold text-[#86868b] tracking-widest font-mono uppercase">
+                  ROLE: {project.role}
+                </span>
 
-                  <div className="mt-8 pt-4 border-t border-white/5">
-                    {/* Tech Stacks */}
-                    <div className="flex flex-wrap gap-1.5 mb-5">
-                      {project.tech.map((t) => (
-                        <span 
-                          key={t} 
-                          className="text-[10px] font-mono text-white/40 border border-white/5 bg-white/2 px-2 py-0.5 rounded"
-                        >
-                          {t}
-                        </span>
-                      ))}
-                    </div>
+                <p className="text-sm text-[#86868b] leading-relaxed font-medium mt-1">
+                  {project.desc}
+                </p>
 
-                    <Link
-                      to={project.path}
-                      className="inline-flex items-center gap-1.5 text-xs font-bold text-white hover:text-[#4F8CFF] transition-all duration-300 group"
+                {/* Tech tags */}
+                <div className="flex flex-wrap gap-2 mt-2">
+                  {project.tech.map((t) => (
+                    <span 
+                      key={t} 
+                      className="text-[11px] text-white bg-[#0f0f0f] border border-white/5 rounded-full px-3.5 py-1.5 font-medium"
                     >
-                      Read Case Study
-                      <Star className="h-3.5 w-3.5 text-[#4F8CFF]/50 group-hover:text-[#4F8CFF] transition-colors" />
-                    </Link>
-                  </div>
+                      {t}
+                    </span>
+                  ))}
                 </div>
-              </GlassCard>
+
+                <div className="mt-4 flex gap-4">
+                  <RouterLink to={project.path} className="btn-apple-blue">
+                    Read Case Study
+                  </RouterLink>
+                </div>
+              </div>
             </motion.div>
           ))}
         </AnimatePresence>
-      </motion.div>
+      </div>
 
     </div>
   );
