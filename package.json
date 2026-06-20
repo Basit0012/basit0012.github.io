@@ -1,0 +1,26 @@
+{
+  "name": "finisher-header",
+  "version": "1.0.1",
+  "description": "Configure your own animated header below and use it on your website",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "files": [
+    "index.js",
+    "index.d.ts",
+    "README.md"
+  ],
+  "scripts": {
+    "download": "wget https://www.finisher.co/lab/header/assets/finisher-header.es5.min.js -O index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zjffun/finisher-header.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "",
+  "bugs": {
+    "url": "https://github.com/zjffun/finisher-header/issues"
+  },
+  "homepage": "https://github.com/zjffun/finisher-header#readme"
+}
