@@ -18,7 +18,7 @@ export const About: React.FC = () => {
     {
       title: 'Full-Stack Systems & Cloud Infrastructure',
       icon: <Code2 className="h-5 w-5 text-[#f5a972]" />,
-      skills: ['Node.js', 'React.js', 'Express.js', 'WebSockets', 'HTML5', 'CSS3', 'Tailwind CSS', 'RESTful APIs', 'PostgreSQL', 'MongoDB', 'Git/GitHub'],
+      skills: ['JavaScript', 'TypeScript', 'Node.js', 'React.js', 'Express.js', 'WebSockets', 'HTML5', 'CSS3', 'Tailwind CSS', 'RESTful APIs', 'PostgreSQL', 'MongoDB', 'Git/GitHub'],
     },
   ];
 
