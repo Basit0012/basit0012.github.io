@@ -1,84 +1,111 @@
-# Game Development & Technical Art Portfolio
+<div align="center">
 
-Welcome to the official repository of my interactive portfolio website. This project showcases my work in gameplay systems engineering, C++ core systems, 3D technical art pipelines (Blender), and full-stack web architectures.
+# MD Abdul Basit
+### Game Developer · Technical Artist · Full-Stack Engineer
 
-🔗 **Live Portfolio:** [basit0012.github.io](https://basit0012.github.io)
+[![Portfolio](https://img.shields.io/badge/🌐_Live_Portfolio-basit0012.github.io-black?style=for-the-badge)](https://basit0012.github.io/)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/md-abdul-basit)
+[![GitHub](https://img.shields.io/badge/GitHub-Follow-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Basit0012)
+
+*Specializing in gameplay systems engineering, C++ core systems, 3D technical art pipelines, and full-stack web architectures.*
+
+</div>
 
 ---
 
 ## 🚀 Projects Showcased
 
-### 1. **Hollow Loop** (3D Psychological Horror Game & Launcher)
-* **Role:** Lead Gameplay Systems Programmer
-* **Stack:** C#, Unity Engine, OOP Architecture, 3D Vector Math
-* **Core Work:** 
-  - Designed event-driven 3D gameplay scripts and modular object sub-systems.
-  - Implemented checkpoint saving, slot-based inventories, and custom game loops.
-  - Optimized mesh rendering queues and runtime asset loads achieving 60+ FPS on mid-range hardware.
-* **Repository:** [HollowLoop Repository](https://github.com/Basit0012/HollowLoop)
+### 1. Hollow Loop — 3D Psychological Horror Game
+**Role:** Lead Gameplay Systems Programmer
 
-### 2. **C++ Navigation & Pathfinding Engine Simulation**
-* **Role:** Core Systems Programmer
-* **Stack:** C++17, A* Algorithm, Memory Pooling, Node Recyclers
-* **Core Work:**
-  - Standalone 2D navigation grid simulator showcasing search algorithm efficiency.
-  - Custom pointer-recycling node pools preventing heap fragmentation.
-  - Recalculates routing matrices in real-time without stuttering rendering threads.
-* **Repository:** [Cpp-Navigation-Pathfinding-Engine-Simulation Repository](https://github.com/Basit0012/Cpp-Navigation-Pathfinding-Engine-Simulation)
+| | |
+|---|---|
+| **Stack** | C#, Unity Engine, OOP Architecture, 3D Vector Math |
+| **Repo** | [github.com/Basit0012/HollowLoop](https://github.com/Basit0012/HollowLoop) |
 
-### 3. **Stylized Isometric Environment Animation**
-* **Role:** 3D Environment & Light Pipeline Artist
-* **Stack:** Blender, Cycles Raytracer, Volumetric Lighting, Emissive Shaders
-* **Core Work:**
-  - Cyber-noir environment featuring complex lighting node setups and emissive noise.
-  - Fully animated keyframe sequences and dynamic camera panning.
-  - Clean mesh topologies reducing vertex counts by 40% for real-time viewport performance.
-* **Video Showcase:** [Blender Animation Showcase](https://www.youtube.com/watch?v=4lvplNIqsPE)
+**What I built:**
+- Designed event-driven 3D gameplay scripts and modular object sub-systems
+- Implemented checkpoint saving, slot-based inventories, and custom game loops
+- Optimized mesh rendering queues and runtime asset loads — achieving **60+ FPS** on mid-range hardware
 
 ---
 
-## 📜 Verified Certifications
+### 2. C++ Navigation & Pathfinding Engine Simulation
+**Role:** Core Systems Programmer
 
-* **User Experience (UX) Design Principles Certification** — IIT Roorkee
-* **Data Structures & Algorithms Engineering Certification** — Cipher Schools
-* **Oracle Cloud Infrastructure 2025 Certified AI Foundations Associate** — Oracle
-* **Oracle Data Platform 2025 Certified Foundations Associate** — Oracle
+| | |
+|---|---|
+| **Stack** | C++17, A\* Algorithm, Memory Pooling, Node Recyclers |
+| **Repo** | [github.com/Basit0012/Cpp-Navigation-Pathfinding-Engine-Simulation](https://github.com/Basit0012/Cpp-Navigation-Pathfinding-Engine-Simulation) |
+
+**What I built:**
+- Standalone 2D navigation grid simulator showcasing A\* search algorithm efficiency
+- Custom pointer-recycling node pools preventing heap fragmentation
+- Real-time routing matrix recalculation without stuttering rendering threads
 
 ---
 
-## 🛠️ Tech Stack & Architecture
+### 3. Stylized Isometric Environment Animation
+**Role:** 3D Environment & Lighting Pipeline Artist
 
-The portfolio website itself is built using standard web technologies styled to match modern Apple design aesthetics (sleek dark mode, glassmorphism, fluid micro-animations):
+| | |
+|---|---|
+| **Stack** | Blender, Cycles Raytracer, Volumetric Lighting, Emissive Shaders |
+| **Showcase** | [▶ Watch on YouTube](https://www.youtube.com/watch?v=4lvplNIqsPE) |
 
-* **Frontend:** React 19, TypeScript 5, Vite
-* **Styling & Layout:** Tailwind CSS v4, Lucide React Icons
-* **Animation:** Framer Motion (Page transitions, scroll reveals, interactive modal drawer mechanics)
-* **Smooth Scrolling:** Lenis smooth momentum scroll engine
+**What I built:**
+- Cyber-noir environment with complex lighting node setups and emissive noise
+- Fully animated keyframe sequences with dynamic camera panning
+- Clean mesh topologies with **40% vertex count reduction** for real-time viewport performance
+
+---
+
+## 🛠️ Portfolio Website — Tech Stack
+
+The portfolio itself is built to match modern Apple design aesthetics — dark mode, glassmorphism, and fluid micro-animations.
+
+| Layer | Technology |
+|---|---|
+| **Frontend** | React 19, TypeScript 5, Vite |
+| **Styling** | Tailwind CSS v4, Lucide React Icons |
+| **Animation** | Framer Motion (page transitions, scroll reveals, modal drawers) |
+| **Scroll** | Lenis smooth momentum scroll engine |
+
+---
+
+## 📜 Certifications
+
+| Certification | Issuer |
+|---|---|
+| User Experience (UX) Design Principles | IIT Roorkee |
+| Data Structures & Algorithms Engineering | Cipher Schools |
+| Oracle Cloud Infrastructure 2025 AI Foundations Associate | Oracle |
+| Oracle Data Platform 2025 Foundations Associate | Oracle |
 
 ---
 
 ## 📦 Local Development
 
-To run this portfolio website locally, follow these steps:
+```bash
+# 1. Clone the repo
+git clone https://github.com/Basit0012/basit0012.github.io.git
+cd basit0012.github.io
 
-1. **Clone the repository:**
-   ```bash
-   git clone https://github.com/Basit0012/Game-Portfolio.git
-   cd Game-Portfolio
-   ```
+# 2. Install dependencies
+npm install
 
-2. **Install dependencies:**
-   ```bash
-   npm install
-   ```
+# 3. Start dev server
+npm run dev
+# → Open http://localhost:5173
 
-3. **Run the development server:**
-   ```bash
-   npm run dev
-   ```
-   Open `http://localhost:5173` (or the port specified in terminal) in your browser.
+# 4. Production build
+npm run build
+```
 
-4. **Build for production:**
-   ```bash
-   npm run build
-   ```
+---
+
+<div align="center">
+
+**Built with precision. Rendered with purpose.**
+
+</div>
